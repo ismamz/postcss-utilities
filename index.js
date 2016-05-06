@@ -71,10 +71,10 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                 }
                 break;
             case 'hide-visually':
-                hideVisually(util, args);
+                hideVisually(util);
                 break;
             case 'clearfix':
-                clearfix(util, args);
+                clearfix(util);
                 break;
             case 'text-hide':
                 textHide(util);
@@ -95,13 +95,13 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                 triangle(util, args);
                 break;
             case 'reset-list':
-                resetList(util, args);
+                resetList(util);
                 break;
             case 'hover':
-                hover(util, args);
+                hover(util);
                 break;
             case 'no-js':
-                noJs(util, args);
+                noJs(util);
                 break;
             case 'hd':
                 hdBreakpoint(util, args, postcss);

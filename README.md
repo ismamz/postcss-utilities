@@ -1,7 +1,5 @@
 # PostCSS Utility Library [![Build Status][ci-img]][ci]
 
-[PostCSS] plugin a collection of mixins, shortcuts, helpers and tools for your CSS.
-
 <p align="center">
     <a href="http://ismamz.github.io/postcss-utilities">
         <img src="https://github.com/ismamz/postcss-utilities/blob/master/media/logo.png" alt="PostCSS Utility Library">
@@ -88,8 +86,3 @@ postcss([ require('postcss-utilities') ])
 ```
 
 See [PostCSS] docs for examples for your environment.
-
-## Contributors
-
-- [Andrey Sitnik](https://github.com/ai)
-- [Marcus Tisäter](https://github.com/marcustisater)
