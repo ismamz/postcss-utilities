@@ -1,0 +1,69 @@
+/* Triangle
+   ========================================================================== */
+.triangle-down {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-top: 12px solid gray;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+}
+
+.triangle-up {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-bottom: 12px solid gray;
+    border-right: 12px solid transparent;
+    border-left: 12px solid transparent;
+}
+
+.triangle-left {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-right: 12px solid gray;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+.triangle-right {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-left: 12px solid gray;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+.triangle-up-left {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-top: 20px solid gray;
+    border-right: 20px solid transparent;
+}
+
+.triangle-up-right {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-top: 20px solid gray;
+    border-left: 20px solid transparent;
+}
+
+.triangle-down-left {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-bottom: 20px solid gray;
+    border-right: 20px solid transparent;
+}
+
+.triangle-down-right {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-bottom: 20px solid gray;
+    border-left: 20px solid transparent;
+}

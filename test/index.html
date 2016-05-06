@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PostCSS Utility Library Test</title>
+
+    <link rel="stylesheet" href="test.expect.css">
+    <link rel="stylesheet" href="triangle.expect.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PostCSS Utility Library Test</h1>
+
+        <h2>truncate</h2>
+
+        <h3>one line - <code>@util truncate;</code></h3>
+
+        <p class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit ratione natus, eveniet nihil culpa pariatur dolor consectetur, aperiam laboriosam quam nesciunt beatae voluptate quo odio! Cumque aspernatur nulla consectetur iste.</p>
+
+        <h3>multiline - <code>@util truncate 3 1.5;</code></h3>
+
+        <p class="multiline">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque consectetur, molestiae nostrum modi voluptas aperiam adipisci dolore eum nesciunt dolores ipsum suscipit beatae, eos vitae qui sapiente deserunt labore minus molestias ut at delectus est quas officiis. Vero magni odit facilis velit, accusantium minima error aut iure. Officiis, commodi, doloribus.</p>
+
+        <hr>
+
+        <h2>hr</h2>
+
+        <h3>default - <code>@util hr;</code></h3>
+        <hr>
+
+        <h3>custom - <code>@util hr red 1em;</code></h3>
+        <hr class="custom-hr">
+
+        <hr>
+
+        <h2>hide-text</h2>
+
+        <div class="text-hide">
+            <img src="http://placehold.it/100x100" alt="Alternative text">
+            Lorem ipsum dolor sit amet.
+        </div>
+
+        <hr>
+
+        <h2>triangle</h2>
+
+        <h3><code>@util triangle 12px gray down;</code></h3>
+
+        <div class="triangle-down"></div>
+        <div class="triangle-up"></div>
+        <div class="triangle-left"></div>
+        <div class="triangle-right"></div>
+        <div class="triangle-up-right"></div>
+        <div class="triangle-up-left"></div>
+        <div class="triangle-down-right"></div>
+        <div class="triangle-up-right"></div>
+
+        <hr>
+
+        <h2>reset-list</h2>
+
+        <ul>
+            <li>Lorem ipsum dolor sit.</li>
+            <li>Illo ex porro molestiae?</li>
+            <li>Earum impedit cum veniam!</li>
+            <li>Ut tempore, corrupti dolore?</li>
+            <li>Ipsa, officia totam mollitia.</li>
+        </ul>
+
+        <hr>
+
+        <h2>aspect-ratio</h2>
+
+        <div class="wrapper" style="max-width: 300px; width: 100%;">
+            <div class="box-16-9">
+                16:9
+            </div>
+        </div>
+
+        <div class="box-4-3">
+            4:3
+        </div>
+
+        <hr>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 990px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Truncate
+   ========================================================================== */
+.truncate {
+    @util truncate;
+    width: 500px;
+}
+
+.multiline {
+    width: 500px;
+    font-size: 1.2em;
+    @util truncate(3, 1.5);
+}
+
+/* Hide Visually
+   ========================================================================== */
+a {
+    @util hide-visually;
+}
+
+/* Clear Fix
+   ========================================================================== */
+.cfx {
+    @util clearfix;
+}
+
+.cfx {
+    color: #000;
+    @util clearfix;
+}
+
+/* Text Hide
+   ========================================================================== */
+.text-hide {
+    background: #000;
+    @util text-hide;
+    color: #fff;
+}
+
+/* Horizontal Rule
+   ========================================================================== */
+hr {
+    @util hr;
+}
+
+.custom-hr {
+    @util hr(red, 1em);
+}
+
+/* Circle
+   ========================================================================== */
+.circle {
+    @util circle(200px, red);
+}
+
+/* Reset List
+   ========================================================================== */
+ul {
+    color: #000;
+    @util reset-list;
+}
+
+/* Media Hover
+   ========================================================================== */
+.hover {
+    background-color: #f3f3f3;
+    color: #000;
+
+    @util hover {
+        background-color: #fff;
+    }
+}
+
+/* No JS
+   ========================================================================== */
+.box {
+    background-color: #f3f3f3;
+    color: #000;
+
+    @util no-js {
+        background-color: #fff;
+    }
+}
+
+/* Aspect Ratio
+   ========================================================================== */
+.box-16-9 {
+    background-color: #ccc;
+    margin-bottom: 20px;
+    @util aspect-ratio(16:9);
+}
+
+.box-4-3 {
+    background-color: #ccc;
+    margin-bottom: 20px;
+    @util aspect-ratio(4:3);
+}

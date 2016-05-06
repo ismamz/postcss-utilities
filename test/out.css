@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 990px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Truncate
+   ========================================================================== */
+.truncate {
+    width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.multiline {
+    width: 500px;
+    font-size: 1.2em;
+    display: block;
+    display: -webkit-box;
+    height: 4.5em;
+    line-height: 1.5;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Hide Visually
+   ========================================================================== */
+a {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Clear Fix
+   ========================================================================== */
+.cfx:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.cfx:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.cfx {
+    color: #000;
+}
+
+/* Text Hide
+   ========================================================================== */
+.text-hide {
+    background: #000;
+    color: #fff;
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+/* Horizontal Rule
+   ========================================================================== */
+hr {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cecece;
+    margin: 3em 0;
+}
+
+.custom-hr {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid red;
+    margin: 1em 0;
+}
+
+/* Circle
+   ========================================================================== */
+.circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+/* Reset List
+   ========================================================================== */
+ul {
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+ul li {
+    list-style: none;
+}
+
+/* Media Hover
+   ========================================================================== */
+.hover {
+    background-color: #f3f3f3;
+    color: #000
+}
+.no-hover .hover {
+    background-color: #fff;
+}
+
+/* No JS
+   ========================================================================== */
+.box {
+    background-color: #f3f3f3;
+    color: #000
+}
+.no-js .box {
+    background-color: #fff;
+}
+
+/* Aspect Ratio
+   ========================================================================== */
+.box-16-9 {
+    background-color: #ccc;
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+}
+
+.box-4-3 {
+    background-color: #ccc;
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 75%;
+}
