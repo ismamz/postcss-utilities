@@ -4,7 +4,7 @@
 
 <p align="center">
     <a href="http://ismamz.github.io/postcss-utilities">
-        <img src="https://github.com/ismamz/postcss-utilities/blob/master/media/logo.svg" alt="PostCSS Utility Library">
+        <img src="https://github.com/ismamz/postcss-utilities/blob/master/media/logo.png" alt="PostCSS Utility Library">
     </a>
 </p>
 
