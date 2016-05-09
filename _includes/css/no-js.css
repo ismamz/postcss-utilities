@@ -1,0 +1,7 @@
+.box {
+  background-color: #fff;
+
+  @util no-js {
+    background-color: #000;
+  }
+}

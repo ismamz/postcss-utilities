@@ -1,0 +1,11 @@
+.box {
+  background: #000;
+}
+
+@media (-o-min-device-pixel-ratio: 2),
+       (-webkit-min-device-pixel-ratio: 2),
+       (min-resolution: 192dpi) {
+  .box {
+    background: #fff;
+  }
+}

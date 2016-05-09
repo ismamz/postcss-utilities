@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
+
+    <title>
+      {{ site.name }}
+    </title>
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,300italic,400italic,500,700,500italic,700italic' rel='stylesheet' type='text/css'>
+</head>
+  <body>
+    {% include header.html %}
+
+    <div class="hero">
+      <div class="container">
+        <img src="img/logo.svg" alt="">
+        <h1>PostCSS Utility Library</h1>
+      </div>
+    </div>
+
+    <div id="main" class="container">
+      <div class="row">
+        <div class="col-12">
+          {{ content }}
+        </div>
+      </div>
+
+      {% include footer.html %}
+    </div>
+
+    {% include js.html %}
+  </body>
+</html>

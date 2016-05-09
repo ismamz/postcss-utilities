@@ -1,0 +1,3 @@
+.triangle-up {
+  @util triangle(20px, blue, up);
+}

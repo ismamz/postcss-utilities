@@ -1,0 +1,7 @@
+.box {
+  background-color: #fff;
+
+  @util hover {
+    background-color: #000;
+  }
+}

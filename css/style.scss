@@ -1,0 +1,628 @@
+---
+---
+/*!
+ * Sass Starter Kit v1.0.0
+ * Copyright (c) 2015 - Ismael Martinez
+ * http://github.com/ismamz/sass-starter-kit/
+ * Licensed under MIT
+ */
+
+// General imports
+@import "variables";
+@import "mixins";
+@import "normalize";
+
+
+/* ==========================================================================
+   Reboot
+   ========================================================================== */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  				box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: $font-size-base/$base-em * 100%;
+  -webkit-tap-highlight-color: transparent;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-stack-main;
+  font-size: $font-size-body;
+  line-height: $line-height-base;
+  font-weight: 300;
+}
+
+
+/* ==========================================================================
+   Type
+   ========================================================================== */
+a,
+a:visited {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: em(26);
+	margin-bottom: em(12);
+	line-height: $line-height-hx;
+}
+
+h1 {
+  font-size: 2.125em;
+}
+
+h2 {
+  font-size: 1.75em;
+  border-bottom: 1px solid $gray-lighter;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+h5 {
+  font-size: 1.125em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+blockquote {
+  margin: 0 0 0 30px;
+  border-left: 5px solid $gray-lighter;
+  padding-left: 20px;
+}
+
+.lead {
+  font-size: em(22);
+}
+
+// Horizontal rule
+hr {
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $gray-lighter;
+  margin: 3em 0;
+}
+
+hr.short {
+  border-color: $gray-lighter;
+  border-style: solid none none;
+  border-width: 0.1em 0 0;
+  margin: 3em auto;
+  max-width: 100px;
+}
+
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+
+	@media screen and ( max-width: em($container-width + ($container-gutter * 2)) ) {
+		margin: 0 em($container-gutter);
+	}
+}
+
+.container:before,
+.container:after {
+  display: table;
+  content: " ";
+}
+
+.container:after {
+  clear: both;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+.row:after {
+  clear: both;
+}
+
+@if $gutter-enable {
+	.row {
+		margin-left: -$gutter;
+		margin-right: -$gutter;
+	}
+}
+
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+[class^="col-"] {
+  float: left;
+
+	@if $gutter-enable {
+		padding-left: $gutter;
+		padding-right: $gutter;
+	}
+}
+
+// desktop
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    width: ($i/$grid-columns) * 100%;
+  }
+}
+
+// tablet
+@include tablet {
+  @for $i from 1 through $grid-columns {
+    .col-md-#{$i} {
+      width: ($i/$grid-columns) * 100%;
+    }
+  }
+}
+
+// mobile
+@include mobile {
+  @for $i from 1 through $grid-columns {
+    .col-sm-#{$i} {
+      width: ($i/$grid-columns) * 100%;
+    }
+  }
+}
+
+.col-center {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+// Hidden (for Breakpoints)
+.hidden {
+    display: none !important;
+}
+@include tablet {
+  .hidden-md {
+      display: none !important;
+  }
+}
+@include mobile {
+  .hidden-sm {
+      display: none !important;
+  }
+}
+
+// Floats
+.fl {
+  float: left !important;
+}
+.fr {
+  float: right !important;
+}
+
+// Hide only visually, but have it available for screen readers
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// Clearfix
+.cfx:before,
+.cfx:after {
+    content: " ";
+    display: table;
+}
+.cfx:after {
+    clear: both;
+}
+
+// Responsive images
+.img-responsive {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+// List inline
+.list-inline {
+	list-style: none;
+	margin: 1em 0;
+	padding-left: 0;
+
+	li {
+		display: inline-block;
+		padding: 0 1em;
+	}
+
+	li:first-child {
+		padding-left: 0;
+	}
+	li:last-child {
+		padding-right: 0;
+	}
+}
+
+
+/* ==========================================================================
+   Accesibility
+   ========================================================================== */
+// Skip link
+.skip-link {
+	background: #000;
+	color: #fff;
+	width: 1px;
+	height: 1px;
+	padding: 1em 1.5em;
+	position: absolute;
+	left: -10000px;
+	top: -40px;
+	overflow: hidden;
+	transition: top 0.3s;
+
+	&:focus {
+		left: 0;
+		top: 0;
+		width: auto;
+		height: auto;
+		z-index: index($elements, skip-nav);
+	}
+}
+
+/* ==========================================================================
+   Hightlights
+   ========================================================================== */
+@import "highlights";
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+  text-align: center;
+  border-top: 1px solid #ccc;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+header {
+  background-color: $main-color;
+  color: #fff;
+  a {
+    color: #fff;
+  }
+
+  .logo {
+    display: block;
+    float: left;
+    height: 64px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    img {
+      width: 67px;
+      height: 40px;
+    }
+  }
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.site-nav {
+  float: right;
+  a {
+    color: $emphasis-color;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      display: inline-block;
+
+      a {
+        padding: 20px 20px;
+        display: block;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero {
+  background-color: $main-color;
+  color: #fff;
+  text-align: center;
+  padding: 4em 20px;
+  font-size: 1.4em;
+
+  img {
+    max-width: 200px;
+    height: auto;
+    width: 100%;
+  }
+
+  h1 {
+    margin: 0;
+    font-weight: 100;
+    letter-spacing: -2px;
+  }
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+.sidebar {
+  border-right: 1px solid #cecece;
+  font-size: 13px;
+  overflow-y: auto;
+  width: 15%;
+  float:right;
+  position: fixed;
+  height: 100%;
+
+  h2 {
+    margin: 8px 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 8px;
+    font-size: 16px;
+    color: $main-color;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      border-bottom: 1px solid #ccc;
+
+      a {
+        display: block;
+        padding: 10px 15px;
+        border-left: 3px solid transparent;
+        &:hover {
+          text-decoration: none;
+          background-color: #f3f3f3;
+        }
+
+        &.active {
+          border-left: 3px solid $emphasis-color;
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   DOCS
+   ========================================================================== */
+#main {
+  margin-top: 30px;
+
+  h1 {
+    margin-top: 20px;
+  }
+}
+
+.content-area {
+  width: 85%;
+  float: right;
+}
+
+.page-title {
+  background-color: $gray-lighter;
+  color: $main-color;
+  text-align: center;
+
+  @include clearfix;
+
+  h1 {
+    margin: 0;
+    padding: 30px 0;
+    line-height: 1;
+  }
+}
+
+.docs-body {
+  position: relative;
+
+  > h2:first-child {
+    margin-top: 0;
+  }
+
+  a {
+    transition: color 0.3s;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.util {
+  .highlight, code {
+    background-color: transparent;
+    font-size: 22px;
+    padding: 0;
+
+    pre {
+      margin-top: 0;
+    }
+  }
+}
+
+/* ==========================================================================
+   Home
+   ========================================================================== */
+.description {
+  font-size: 32px;
+  line-height: 1.4;
+  text-align: center;
+  max-width: 75%;
+  margin: 30px auto;
+  letter-spacing: -1px;
+}
+
+/* ==========================================================================
+   Examples
+   ========================================================================== */
+/* Triangle
+   ========================================================================== */
+.triangle-down {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-top: 12px solid gray;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+}
+
+.triangle-up {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-bottom: 12px solid gray;
+  border-right: 12px solid transparent;
+  border-left: 12px solid transparent;
+}
+
+.triangle-left {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-right: 12px solid gray;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+
+.triangle-right {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-left: 12px solid gray;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+
+.triangle-up-left {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-top: 20px solid gray;
+  border-right: 20px solid transparent;
+}
+
+.triangle-up-right {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-top: 20px solid gray;
+  border-left: 20px solid transparent;
+}
+
+.triangle-down-left {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-bottom: 20px solid gray;
+  border-right: 20px solid transparent;
+}
+
+.triangle-down-right {
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-bottom: 20px solid gray;
+  border-left: 20px solid transparent;
+}
+
+.center-block {
+  text-align: center;
+  background-color: #f3f3f3;
+  padding: 20px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.circle {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: $main-color;
+}
+
+.parent {
+  position: relative;
+  width: 50%;
+  height: 180px;
+  background: #ddd;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #5D4157;
+  color: #fff;
+  padding: 20px;
+}

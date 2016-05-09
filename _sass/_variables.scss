@@ -1,0 +1,52 @@
+// Variables
+// ======================================
+
+// Base
+$font-size-base: 		16px; // set base font-size in pixels
+
+$font-size-body:	 	1em !default;
+$base-em: 					16px !default; // browser default
+
+$line-height-base:  1.5;
+$line-height-hx:		1.25;
+
+
+// Colors
+$background-color:  #fff;
+$text-color:        #222;
+
+$main-color:        #5d4157;
+$emphasis-color:    #dac582;
+
+$link-color:        $main-color;
+
+$gray-lighter:      lighten(#000, 90%); // #e6e6e6
+$gray:              lighten(#000, 40%); // #666
+$gray-darker:       lighten(#000, 20%); // #333
+
+
+// Fonts
+$font-stack-main:   'Fira Sans', 'Arial', 'Helvetica Neue', 'Helvetica', sans-serif;
+$font-stack-alt:    'Georgia', 'Times', 'Times New Roman', serif;
+$font-stack-code:   'Source Code Pro', 'Consolas', 'Courier', monospace;
+
+
+// Grid and Layout
+$grid-columns:      12;
+$container-width:   980px;
+$container-gutter: 	16px;
+$gutter-enable:     true;
+$gutter:            15px;
+
+
+// Breakpoints
+$breakpoint-tablet: 991px;
+$breakpoint-mobile: 580px;
+
+
+// z-index
+// eg. z-index: index($elements, $name);
+$elements:
+  // back
+  skip-nav;
+  // front
