@@ -156,3 +156,20 @@ ul li {
     overflow: hidden;
     padding-bottom: 75%;
 }
+
+/* Center Block
+   ========================================================================== */
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Center
+   ========================================================================== */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

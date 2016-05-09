@@ -3,6 +3,8 @@ var parser  = require('postcss-value-parser');
 
 // import functions
 var aspectRatio =       require('./lib/aspect-ratio');
+var center =            require('./lib/center');
+var centerBlock =       require('./lib/center-block');
 var circle =            require('./lib/circle');
 var clearfix =          require('./lib/clearfix');
 var hdBreakpoint =      require('./lib/hd-breakpoint');
@@ -19,14 +21,15 @@ var truncateMultiline = require('./lib/truncate-multiline');
 // list of utilities names
 var names = [
     'aspect-ratio',
+    'center',
+    'center-block',
     'circle',
     'clearfix',
     'hd',
     'hide-visually',
-    'horizontal-rule',
+    'hr',
     'hover',
     'no-js',
-    'hr',
     'reset-list',
     'text-hide',
     'triangle',
@@ -63,39 +66,32 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
 
             // case by case
             switch (name) {
-            case 'truncate':
-                if (args.length > 1) {
-                    truncateMultiline(util, args);
-                } else {
-                    truncate(util, args);
-                }
-                break;
-            case 'hide-visually':
-                hideVisually(util);
-                break;
-            case 'clearfix':
-                clearfix(util);
-                break;
-            case 'text-hide':
-                textHide(util);
-                break;
             case 'aspect-ratio':
                 if (args.length > 3) {
                     result.warn('Too many arguments for aspect-ratio utility.');
                 }
                 aspectRatio(util, args);
                 break;
-            case 'hr':
-                horizontalRule(util, args);
+            case 'center':
+                center(util, args);
+                break;
+            case 'center-block':
+                centerBlock(util, args);
                 break;
             case 'circle':
                 circle(util, args);
                 break;
-            case 'triangle':
-                triangle(util, args);
+            case 'clearfix':
+                clearfix(util);
                 break;
-            case 'reset-list':
-                resetList(util);
+            case 'hd':
+                hdBreakpoint(util, args, postcss);
+                break;
+            case 'hide-visually':
+                hideVisually(util);
+                break;
+            case 'hr':
+                horizontalRule(util, args);
                 break;
             case 'hover':
                 hover(util);
@@ -103,8 +99,21 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
             case 'no-js':
                 noJs(util);
                 break;
-            case 'hd':
-                hdBreakpoint(util, args, postcss);
+            case 'reset-list':
+                resetList(util);
+                break;
+            case 'text-hide':
+                textHide(util);
+                break;
+            case 'triangle':
+                triangle(util, args);
+                break;
+            case 'truncate':
+                if (args.length > 1) {
+                    truncateMultiline(util, args);
+                } else {
+                    truncate(util, args);
+                }
                 break;
             default:
                 break;
