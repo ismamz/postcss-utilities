@@ -6,8 +6,8 @@ url: "http://ismamz.github.io/postcss-utilities"
 twitter_username: ismamz
 github_username:  ismamz
 version: 0.1.0
-author: Ismael Martínez
-author_url: http://isma.uy/
+author: PostCSS
+author_url: http://postcss.org/
 
 # Build settings
 markdown: kramdown
