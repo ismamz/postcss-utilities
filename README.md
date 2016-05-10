@@ -12,6 +12,22 @@
 
 [postcss-utilities](http://github.io/ismamz/postcss-utilities) is a [PostCSS] plugin that have the most used mixins, shortcuts and helpers to use as native `@util` rules in yours stylesheets.
 
+### List of Utilities
+
+- [aspect-ratio](http://ismamz.github.io/postcss-utilities/docs#aspect-ratio)
+- [center](http://ismamz.github.io/postcss-utilities/docs#center)
+- [center-block](http://ismamz.github.io/postcss-utilities/docs#center-block)
+- [circle](http://ismamz.github.io/postcss-utilities/docs#circle)
+- [clearfix](http://ismamz.github.io/postcss-utilities/docs#clear-fix)
+- [hd breakpoint](http://ismamz.github.io/postcss-utilities/docs#hd-breakpoint)
+- [hide-visually](http://ismamz.github.io/postcss-utilities/docs#hide-visually)
+- [hr](http://ismamz.github.io/postcss-utilities/docs#horizontal-rule)
+- [hover](http://ismamz.github.io/postcss-utilities/docs#hover)
+- [no-js](http://ismamz.github.io/postcss-utilities/docs#no-js)
+- [reset-list](http://ismamz.github.io/postcss-utilities/docs#reset-list)
+- [text-hide](http://ismamz.github.io/postcss-utilities/docs#text-hide)
+- [triangle](http://ismamz.github.io/postcss-utilities/docs#triangle)
+- [truncate](http://ismamz.github.io/postcss-utilities/docs#truncate)
 
 ### What is the difference with preprocessor’s mixins libraries?
 
