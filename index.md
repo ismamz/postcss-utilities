@@ -62,4 +62,4 @@ You can use a PostCSS runner or use directly PostCSS API. Choose your favorite r
 
 <hr class="short">
 
-<a class="btn" href="/docs">Read the docs</a>
+<a class="btn" href="{{ site.baseurl }}/docs">Read the docs</a>
