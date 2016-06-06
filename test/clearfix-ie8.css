@@ -1,0 +1,17 @@
+/* Clear Fix IE8
+   ========================================================================== */
+.cfx,
+.foo,
+.bar {
+    margin: 0;
+    top: 3px;
+    @util clearfix-ie8;
+}
+
+.woo {
+    float: left;
+}
+
+.cfx {
+    @util clearfix-ie8;
+}

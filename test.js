@@ -13,6 +13,14 @@ function run(t, input, output, opts = { }) {
         });
 }
 
+function runWithWarn(t, input, output, numberOfWarn, opts = { }) {
+    return postcss([ plugin(opts) ]).process(input)
+        .then( result => {
+            t.deepEqual(result.css, output);
+            t.deepEqual(result.warnings().length, numberOfWarn);
+        });
+}
+
 test('truncate multiline', t => {
     return run(t, 'a{ @util truncate (3, 1.5); }',
                   'a{ display: block; display: -webkit-box;' +
@@ -72,6 +80,30 @@ test('text hide', t => {
 test('triangle', t => {
     var input = fs.readFileSync('test/triangle.css', 'utf8');
     var output = fs.readFileSync('test/triangle.expect.css', 'utf8');
+    return run(t, input, output, { });
+});
+
+test('warnings', t => {
+    var input = fs.readFileSync('test/warnings.css', 'utf8');
+    var output = fs.readFileSync('test/warnings.expect.css', 'utf8');
+    return runWithWarn(t, input, output, 2, { });
+});
+
+test('hd breakpoint', t => {
+    var input = fs.readFileSync('test/hd.css', 'utf8');
+    var output = fs.readFileSync('test/hd.expect.css', 'utf8');
+    return run(t, input, output, { });
+});
+
+test('with nested rules', t => {
+    var input = fs.readFileSync('test/nested.css', 'utf8');
+    var output = fs.readFileSync('test/nested.expect.css', 'utf8');
+    return run(t, input, output, { });
+});
+
+test('clearfix ie8', t => {
+    var input = fs.readFileSync('test/clearfix-ie8.css', 'utf8');
+    var output = fs.readFileSync('test/clearfix-ie8.expect.css', 'utf8');
     return run(t, input, output, { });
 });
 

@@ -12,6 +12,8 @@
 
 [postcss-utilities](http://github.io/ismamz/postcss-utilities) is a [PostCSS] plugin that have the most used mixins, shortcuts and helpers to use as native `@util` rules in yours stylesheets.
 
+<h3 align="center"><a href="http://ismamz.github.io/postcss-utilities">See Documentation</a></h3>
+
 ### List of Utilities
 
 - [aspect-ratio](http://ismamz.github.io/postcss-utilities/docs#aspect-ratio)
@@ -33,11 +35,9 @@
 
 - You don’t need extra files for mixins.
 - You don’t need mixins for vendor prefixes (use [autoprefixer plugin](https://github.com/postcss/autoprefixer) for that)
-- You can use LESS, SASS, pure CSS or whatever you want.
+- You can use with LESS, SASS, pure CSS or whatever you want.
 
-### [See Documentation](http://ismamz.github.io/postcss-utilities)
-
-## Example
+## Examples
 
 ### Input
 ```css
@@ -102,3 +102,11 @@ postcss([ require('postcss-utilities') ])
 ```
 
 See [PostCSS] docs for examples for your environment.
+
+## Contributing
+
+The list of utilities is open to new mixins, shortcuts and helpers.
+- Do you think that we should include one? [Create an issue with you proposal](https://github.com/ismamz/postcss-utilities/issues/new).
+- Do you have a problem? [Write an issue](https://github.com/ismamz/postcss-utilities/issues/new).
+- Do you want to contribute with code? [Send a pull request](https://github.com/ismamz/postcss-utilities/pull/new/master)
+- Do you find an error in the documentation? [Fix it in `gh-pages` branch and send a pull request](https://github.com/ismamz/postcss-utilities/tree/gh-pages)

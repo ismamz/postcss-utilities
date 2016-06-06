@@ -1,0 +1,25 @@
+.selector {
+	color: #fff;
+  	float: right;
+}
+
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  .foo {
+  	float: right;
+    top: 0;
+  }
+
+  .bar {
+    color: red;
+  }
+}
+
+.foo {
+	color: red;
+}
+
+@media print, (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) {
+  .bar {
+    border: 0;
+  }
+}

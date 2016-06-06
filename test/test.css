@@ -72,28 +72,6 @@ ul {
     @util reset-list;
 }
 
-/* Media Hover
-   ========================================================================== */
-.hover {
-    background-color: #f3f3f3;
-    color: #000;
-
-    @util hover {
-        background-color: #fff;
-    }
-}
-
-/* No JS
-   ========================================================================== */
-.box {
-    background-color: #f3f3f3;
-    color: #000;
-
-    @util no-js {
-        background-color: #fff;
-    }
-}
-
 /* Aspect Ratio
    ========================================================================== */
 .box-16-9 {

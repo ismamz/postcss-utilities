@@ -36,6 +36,9 @@
     "test": "ava && eslint **/*.js"
   },
   "eslintConfig": {
-    "extends": "eslint-config-postcss/es5"
+    "extends": "postcss/es5",
+    "rules": {
+      "complexity": ["error", { "max": 23 }]
+    }
   }
 }

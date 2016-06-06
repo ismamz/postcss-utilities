@@ -113,26 +113,6 @@ ul li {
     list-style: none;
 }
 
-/* Media Hover
-   ========================================================================== */
-.hover {
-    background-color: #f3f3f3;
-    color: #000
-}
-.no-hover .hover {
-    background-color: #fff;
-}
-
-/* No JS
-   ========================================================================== */
-.box {
-    background-color: #f3f3f3;
-    color: #000
-}
-.no-js .box {
-    background-color: #fff;
-}
-
 /* Aspect Ratio
    ========================================================================== */
 .box-16-9 {

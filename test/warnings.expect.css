@@ -1,0 +1,19 @@
+.multiline {
+    width: 500px;
+    font-size: 1.2em;
+    display: block;
+    display: -webkit-box;
+    height: 3em;
+    line-height: 1;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}

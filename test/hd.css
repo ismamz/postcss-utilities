@@ -1,0 +1,25 @@
+.selector {
+	color: #fff;
+  	float: right;
+}
+
+@util hd {
+  .foo {
+  	float: right;
+    top: 0;
+  }
+
+  .bar {
+    color: red;
+  }
+}
+
+.foo {
+	color: red;
+}
+
+@util hd(1.5, 192dpi) {
+  .bar {
+    border: 0;
+  }
+}
