@@ -1,0 +1,8 @@
+.cfx:after,
+.cfx:before {
+    display: table;
+    content: ' ';
+}
+.cfx:after {
+    clear: both;
+}

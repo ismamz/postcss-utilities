@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
 
     <title>
       {{ site.name }}
@@ -23,18 +23,19 @@
 
       <div id="main" class="container">
         <div class="row">
-          <div class="col-10 col-md-12 col-center">
+          <div class="col-9 col-md-12">
             <div class="docs-body">
               {{ content }}
             </div>
+          </div>
+          <div class="col-3 col-md-12">
+            {% include sidebar.html %}
           </div>
         </div>
 
         {% include footer.html %}
       </div>
     </div>
-
-    {% include sidebar.html %}
 
     {% include js.html %}
   </body>

@@ -2,7 +2,7 @@
 ---
 /*!
  * Sass Starter Kit v1.0.0
- * Copyright (c) 2015 - Ismael Martinez
+ * Copyright (c) 2016 - Ismael Martinez
  * http://github.com/ismamz/sass-starter-kit/
  * Licensed under MIT
  */
@@ -12,7 +12,6 @@
 @import "mixins";
 @import "normalize";
 
-
 /* ==========================================================================
    Reboot
    ========================================================================== */
@@ -20,12 +19,12 @@
 *:before,
 *:after {
   -webkit-box-sizing: inherit;
-  				box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: $font-size-base/$base-em * 100%;
   -webkit-tap-highlight-color: transparent;
   overflow-y: scroll;
@@ -37,6 +36,7 @@ body {
   position: relative;
   height: 100%;
 }
+
 
 /* ==========================================================================
    Base
@@ -70,9 +70,9 @@ h3,
 h4,
 h5,
 h6 {
-	margin-top: em(26);
-	margin-bottom: em(12);
-	line-height: $line-height-hx;
+  margin-top: em(26);
+  margin-bottom: em(12);
+  line-height: $line-height-hx;
 }
 
 h1 {
@@ -136,9 +136,9 @@ hr.short {
   max-width: $container-width;
   margin: 0 auto;
 
-	@media screen and ( max-width: em($container-width + ($container-gutter * 2)) ) {
-		margin: 0 em($container-gutter);
-	}
+  @media screen and ( max-width: em($container-width + ($container-gutter * 2))) {
+    margin: 0 em($container-gutter);
+  }
 }
 
 .container:before,
@@ -156,15 +156,16 @@ hr.short {
   display: table;
   content: " ";
 }
+
 .row:after {
   clear: both;
 }
 
 @if $gutter-enable {
-	.row {
-		margin-left: -$gutter;
-		margin-right: -$gutter;
-	}
+  .row {
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+  }
 }
 
 
@@ -174,10 +175,10 @@ hr.short {
 [class^="col-"] {
   float: left;
 
-	@if $gutter-enable {
-		padding-left: $gutter;
-		padding-right: $gutter;
-	}
+  @if $gutter-enable {
+    padding-left: $gutter;
+    padding-right: $gutter;
+  }
 }
 
 // desktop
@@ -217,16 +218,18 @@ hr.short {
    ========================================================================== */
 // Hidden (for Breakpoints)
 .hidden {
-    display: none !important;
+  display: none !important;
 }
+
 @include tablet {
   .hidden-md {
-      display: none !important;
+    display: none !important;
   }
 }
+
 @include mobile {
   .hidden-sm {
-      display: none !important;
+    display: none !important;
   }
 }
 
@@ -234,56 +237,87 @@ hr.short {
 .fl {
   float: left !important;
 }
+
 .fr {
   float: right !important;
 }
 
 // Hide only visually, but have it available for screen readers
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 // Clearfix
 .cfx:before,
 .cfx:after {
-    content: " ";
-    display: table;
+  content: ' ';
+  display: table;
 }
+
 .cfx:after {
-    clear: both;
+  clear: both;
 }
 
 // Responsive images
 .img-responsive {
-	display: block;
-	width: 100%;
-	height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 // List inline
 .list-inline {
-	list-style: none;
-	margin: 1em 0;
-	padding-left: 0;
+  list-style: none;
+  margin: 1em 0;
+  padding-left: 0;
 
-	li {
-		display: inline-block;
-		padding: 0 1em;
-	}
+  li {
+    display: inline-block;
+    padding: 0 1em;
+  }
 
-	li:first-child {
-		padding-left: 0;
-	}
-	li:last-child {
-		padding-right: 0;
-	}
+  li:first-child {
+
+    padding-left: 0;
+  }
+  li:last-child {
+    padding-right: 0;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+  border: 2px solid $main-color;
+  font-weight: 500;
+  border-radius: 3px;
+  padding: 10px 26px;
+  text-align: center;
+  width: 75%;
+  min-width: 250px;
+  font-size: 1.75em;
+  text-decoration: none;
+  margin: 0 auto;
+  display: block;
+  transition: all 0.15s;
+
+  &:hover {
+    background-color: $main-color;
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 
@@ -292,25 +326,26 @@ hr.short {
    ========================================================================== */
 // Skip link
 .skip-link {
-	background: #000;
-	color: #fff;
-	width: 1px;
-	height: 1px;
-	padding: 1em 1.5em;
-	position: absolute;
-	left: -10000px;
-	top: -40px;
-	overflow: hidden;
-	transition: top 0.3s;
+  background: #000;
+  color: #fff;
+  width: 1px;
+  height: 1px;
+  padding: 1em 1.5em;
+  position: absolute;
+  left: -10000px;
+  top: -40px;
+  overflow: hidden;
+  transition: top 0.3s;
 
-	&:focus {
-		left: 0;
-		top: 0;
-		width: auto;
-		height: auto;
-		z-index: index($elements, skip-nav);
-	}
+  &:focus {
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    z-index: index($elements, skip-nav);
+  }
 }
+
 
 /* ==========================================================================
    Hightlights
@@ -320,7 +355,6 @@ hr.short {
 /* ==========================================================================
    Footer
    ========================================================================== */
-
 .site-footer {
   text-align: center;
   border-top: 1px solid #ccc;
@@ -328,12 +362,15 @@ hr.short {
   margin-top: 60px;
 }
 
+
 /* ==========================================================================
    Header
    ========================================================================== */
 header {
   background-color: $main-color;
   color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
   a {
     color: #fff;
   }
@@ -350,12 +387,15 @@ header {
       height: 40px;
     }
   }
-
-  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .site-nav {
   float: right;
+
+  @include tablet {
+    float: left;
+  }
+
   a {
     color: $emphasis-color;
   }
@@ -363,17 +403,30 @@ header {
   ul {
     margin: 0;
     padding: 0;
+
     li {
       list-style: none;
       display: inline-block;
 
+      @include tablet {
+        width: 100%;
+        display: block;
+      }
+
       a {
         padding: 20px 20px;
         display: block;
+
+        img {
+          margin-top: 3px;
+          margin-right: 8px;
+          float: left;
+        }
       }
     }
   }
 }
+
 
 /* ==========================================================================
    Hero
@@ -382,7 +435,7 @@ header {
   background-color: $main-color;
   color: #fff;
   text-align: center;
-  padding: 4em 20px;
+  padding: 5em 20px;
   font-size: 1.4em;
 
   img {
@@ -394,35 +447,44 @@ header {
   h1 {
     margin: 0;
     font-weight: 100;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
+    font-size: em(32);
   }
 }
+
 
 /* ==========================================================================
    Sidebar
    ========================================================================== */
 .sidebar {
-  border-right: 1px solid #cecece;
   font-size: 13px;
   overflow-y: auto;
-  width: 15%;
-  float:right;
-  position: fixed;
-  height: 100%;
-
-  h2 {
-    margin: 8px 0;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-bottom: 1px solid #cecece;
-    padding-bottom: 8px;
-    font-size: 16px;
-    color: $main-color;
-  }
+  float: right;
+  width: 100%;
+  border: 1px solid #cecece;
+  border-radius: 3px;
 
   ul {
     margin: 0;
     padding: 0;
+
+    .li-btn {
+      border-bottom: 0;
+      background-color: $main-color;
+      border-bottom-right-radius: 3px;
+      border-bottom-left-radius: 3px;
+
+      a {
+        color: #fff;
+        font-weight: bold;
+
+        &:hover {
+          color: $emphasis-color;
+          background-color: $main-color;
+        }
+      }
+    }
+
     li {
       list-style: none;
       border-bottom: 1px solid #ccc;
@@ -431,6 +493,7 @@ header {
         display: block;
         padding: 10px 15px;
         border-left: 3px solid transparent;
+
         &:hover {
           text-decoration: none;
           background-color: #f3f3f3;
@@ -444,6 +507,7 @@ header {
   }
 }
 
+
 /* ==========================================================================
    DOCS
    ========================================================================== */
@@ -453,11 +517,6 @@ header {
   h1 {
     margin-top: 20px;
   }
-}
-
-.content-area {
-  width: 85%;
-  float: right;
 }
 
 .page-title {
@@ -491,7 +550,8 @@ header {
 }
 
 .util {
-  .highlight, code {
+  .highlight,
+  code {
     background-color: transparent;
     font-size: 22px;
     padding: 0;
@@ -502,6 +562,7 @@ header {
   }
 }
 
+
 /* ==========================================================================
    Home
    ========================================================================== */
@@ -509,14 +570,19 @@ header {
   font-size: 32px;
   line-height: 1.4;
   text-align: center;
-  max-width: 75%;
   margin: 30px auto;
   letter-spacing: -1px;
+
+  @include mobile {
+    font-size: 26px;
+  }
 }
+
 
 /* ==========================================================================
    Examples
    ========================================================================== */
+
 /* Triangle
    ========================================================================== */
 .triangle-down {
@@ -625,4 +691,75 @@ header {
   background: #5D4157;
   color: #fff;
   padding: 20px;
+}
+
+.wrap-box {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.box-16-9 {
+  background-color: $emphasis-color;
+  text-align: center;
+  font-size: 2em;
+  color: #fff;
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+}
+
+
+/* ==========================================================================
+   Markdown
+   ========================================================================== */
+table {
+  width: 100%;
+  padding: 0;
+  display: block;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+table tr {
+  border-top: 1px solid #cccccc;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+table tr th {
+  font-weight: bold;
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+table tr td {
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+table tr th:first-child,
+table tr td:first-child {
+  margin-top: 0;
+}
+
+table tr th:last-child,
+table tr td:last-child {
+  margin-bottom: 0;
 }

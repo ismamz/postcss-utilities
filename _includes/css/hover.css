@@ -1,7 +1,9 @@
 .box {
-  background-color: #fff;
+  background-color: #000;
+}
 
-  @util hover {
-    background-color: #000;
+@util hover {
+  .box {
+    background-color: #666;
   }
 }

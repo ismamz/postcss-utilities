@@ -1,7 +1,5 @@
-.box {
-  background: #000;
-
-  @util hd 2.0 {
-    background: #fff;
+@util hd {
+  .foo {
+    float: right;
   }
 }

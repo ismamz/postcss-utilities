@@ -1,6 +1,3 @@
-.parent {
-  position: relative;
-}
 .child {
   position: absolute;
   top: 50%;

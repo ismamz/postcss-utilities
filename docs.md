@@ -9,9 +9,17 @@ title: Documentation
   {% highlight css %}@util aspect-ratio([ratio]);{% endhighlight %}
 </div>
 
+<div class="wrap-box">
+  <div class="box-16-9">
+    16:9
+  </div>
+</div>
+
 #### Parameters
 
-- `[ratio]` _(Optional)_ Format: `[int]:[int]` Default value: `16:9`
+| Parameter | Type | Default | Optional |
+|-----------|------|---------|----------|
+| ratio | `<int>:<int>` | `16:9` | Yes |
 
 <div class="row">
   <div class="col-6 col-sm-12">
@@ -29,7 +37,7 @@ title: Documentation
   {% highlight css %}@util center;{% endhighlight %}
 </div>
 
-Block-level element of an unknown height and width, centered vertically within my parent.
+Block-level element of an unknown height and width, centered vertically within his parent.
 
 <div class="parent">
   .parent
@@ -47,12 +55,16 @@ Block-level element of an unknown height and width, centered vertically within m
   </div>
 </div>
 
+**Note:** You should add `position: relative` to the parent element.
+
 
 ## Center Block
 
 <div class="util">
   {% highlight css %}@util center-block;{% endhighlight %}
 </div>
+
+Center block with a width.
 
 <div class="row">
   <div class="col-6 col-sm-12">
@@ -76,8 +88,10 @@ Create a simple circle figure.
 
 #### Parameters
 
-- `[radio]` _(Optional)_ Default value: `100px`
-- `[color]` _(Optional)_ Default value: `#000`
+| Parameter | Type | Default | Optional |
+|-----------|------|---------|----------|
+| radius | size | `100px` | Yes |
+| color | color | `#000` | Yes |
 
 <div class="row">
   <div class="col-6 col-sm-12">
@@ -111,14 +125,43 @@ Read more:
   </div>
 </div>
 
+### Clear Fix for old browsers
+
+<div class="util">
+  {% highlight css %}@util clearfix-ie8;{% endhighlight %}
+</div>
+
+<div class="row">
+  <div class="col-6 col-sm-12">
+    {% highlight css %}{% include css/clearfix-ie8.css %}{% endhighlight %}
+  </div>
+  <div class="col-6 col-sm-12">
+    {% highlight css %}{% include css/clearfix-ie8.expect.css %}{% endhighlight %}
+  </div>
+</div>
+
 
 ## HD Breakpoint
 
 <div class="util">
-  {% highlight css %}@util hd [pixel-ratio] {
-    [nested-rules]
-  }{% endhighlight %}
+{% highlight css %}@util hd [min-resolution] {
+  [nested-rules]
+}{% endhighlight %}
 </div>
+
+Style adjustments for high resolution devices.
+
+Read more:
+
+- [HTML5 Boilerplate - Include a HiDPI closure in the sample media queries](https://github.com/h5bp/html5-boilerplate/issues/1127)
+- [MDN - `<resolution>`](https://developer.mozilla.org/en-US/docs/Web/CSS/resolution)
+
+#### Parameters
+
+| Parameter | Type | Default | Optional |
+|-----------|------|---------|----------|
+| min-device-pixel-ratio | pixel-ratio | `1.25` | Yes |
+| min-resolution | resolution value | `120dpi` | Yes |
 
 <div class="row">
   <div class="col-6 col-sm-12">
@@ -154,8 +197,10 @@ Only display content to screen readers. Read more: [How to hide content (a11ypro
 
 #### Parameters
 
-- `[color]` _(Optional)_ Default value: `#ccc`
-- `[vertical-margin]` _(Optional)_ Default value: `1em`
+| Parameter | Type | Default | Optional |
+|-----------|------|---------|----------|
+| color  | color | `#ccc` | Yes |
+| vertical-margin  | size | `1em` | Yes |
 
 <div class="row">
   <div class="col-6 col-sm-12">
@@ -175,6 +220,12 @@ Only display content to screen readers. Read more: [How to hide content (a11ypro
 }{% endhighlight %}
 </div>
 
+**Note:** You should add `.no-hover` class to the `html` tag when the browser or device doesn't support `hover`.
+
+Similar to:
+
+- [A shim for the Media Queries Level 4 `hover` media feature](https://github.com/twbs/mq4-hover-shim)
+
 <div class="row">
   <div class="col-6 col-sm-12">
     {% highlight css %}{% include css/hover.css %}{% endhighlight %}
@@ -193,6 +244,8 @@ Only display content to screen readers. Read more: [How to hide content (a11ypro
 }{% endhighlight %}
 </div>
 
+**Note:** You should add `.no-js` class to the `html` tag when the browser or device doesn't support JavaScript.
+
 <div class="row">
   <div class="col-6 col-sm-12">
     {% highlight css %}{% include css/no-js.css %}{% endhighlight %}
@@ -208,6 +261,8 @@ Only display content to screen readers. Read more: [How to hide content (a11ypro
 <div class="util">
 {% highlight css %}@util reset-list;{% endhighlight %}
 </div>
+
+Remove default styles for lists.
 
 <div class="row">
   <div class="col-6 col-sm-12">
@@ -260,9 +315,11 @@ Create triangle figures.
 
 #### Parameters
 
-- `[size]` _(Optional)_ Default value: `12px`
-- `[color]` _(Optional)_ Default value: `#000`
-- `[orientation]` _(Optional)_ Values: {`up`, `down`, `left`, `right`, `up-left`, `up-right`, `down-left`, `down-right`} Default value: `down`
+| Parameter | Type | Default | Optional |
+|-----------|------|---------|----------|
+| size  | size | `12px` | Yes |
+| color  | color | `#000` | Yes |
+| orientation  | {`up`, `down`, `left`, `right`, `up-left`, `up-right`, `down-left`, `down-right`} | `down` | Yes |
 
 <div class="row">
   <div class="col-6 col-sm-12">
@@ -299,10 +356,14 @@ This mixin will truncate text, adding an ellipsis to represent overflow.
   {% highlight css %}@util truncate([lines], [line-height]);{% endhighlight %}
 </div>
 
+Read more: [Line Clampin’ (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/).
+
 #### Parameters
 
-- `[lines]` number of lines
-- `[line-height]` unitless line-height value
+| Parameter | Type | Default | Optional |
+|-----------|------|---------|----------|
+| lines  | `int` | `3` | Yes |
+| line-height  | unitless line-height value | `1` | Yes |
 
 <div class="row">
   <div class="col-6 col-sm-12">
@@ -312,3 +373,5 @@ This mixin will truncate text, adding an ellipsis to represent overflow.
     {% highlight css %}{% include css/truncate-multiline.expect.css %}{% endhighlight %}
   </div>
 </div>
+
+**Note:** Multiline ellipsis is [not supported by Firefox, Edge & IE](http://caniuse.com/#feat=css-line-clamp).
