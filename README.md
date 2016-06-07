@@ -10,7 +10,7 @@
 [ci-img]:  https://travis-ci.org/ismamz/postcss-utilities.svg
 [ci]:      https://travis-ci.org/ismamz/postcss-utilities
 
-[postcss-utilities](http://github.io/ismamz/postcss-utilities) is a [PostCSS] plugin that have the most used mixins, shortcuts and helpers to use as native `@util` rules in yours stylesheets.
+[postcss-utilities](http://github.io/ismamz/postcss-utilities) is a [PostCSS] plugin that have the most used mixins, shortcuts and helpers to use as `@util` rules in yours stylesheets.
 
 <h3 align="center"><a href="http://ismamz.github.io/postcss-utilities">See Documentation</a></h3>
 
