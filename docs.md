@@ -212,10 +212,10 @@ Only display content to screen readers. Read more: [How to hide content (a11ypro
 </div>
 
 
-## Hover
+## No Hover
 
 <div class="util">
-{% highlight css %}@util hover {
+{% highlight css %}@util no-hover {
   [nested-rules]
 }{% endhighlight %}
 </div>
