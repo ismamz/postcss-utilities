@@ -2,7 +2,7 @@
   background-color: #000;
 }
 
-@util hover {
+@util no-hover {
   .box {
     background-color: #666;
   }
