@@ -5,7 +5,7 @@
     color: #000;
 }
 
-@util hover {
+@util no-hover {
     .hover,
     .foo {
         background-color: #fff;

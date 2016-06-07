@@ -83,16 +83,16 @@ test('triangle', t => {
     return run(t, input, output, { });
 });
 
-test('warnings', t => {
-    var input = fs.readFileSync('test/warnings.css', 'utf8');
-    var output = fs.readFileSync('test/warnings.expect.css', 'utf8');
-    return runWithWarn(t, input, output, 2, { });
-});
-
 test('hd breakpoint', t => {
     var input = fs.readFileSync('test/hd.css', 'utf8');
     var output = fs.readFileSync('test/hd.expect.css', 'utf8');
     return run(t, input, output, { });
+});
+
+test('warnings', t => {
+    var input = fs.readFileSync('test/warnings.css', 'utf8');
+    var output = fs.readFileSync('test/warnings.expect.css', 'utf8');
+    return runWithWarn(t, input, output, 2, { });
 });
 
 test('with nested rules', t => {

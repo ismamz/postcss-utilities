@@ -1,36 +1,164 @@
-/* Clear Fix IE8
-   ========================================================================== */
-.cfx,
-.foo,
-.bar {
+body {
     margin: 0;
-    top: 3px;
+    padding: 0;
+    font-family: sans-serif;
 }
-.cfx:after,
-.cfx:before,
-.foo:after,
-.foo:before,
-.bar:after,
-.bar:before {
-    display: table;
-    content: ' ';
+
+.container {
+    max-width: 990px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
-.cfx:after,
-.foo:after,
-.bar:after {
+
+/* Truncate
+   ========================================================================== */
+.truncate {
+    width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.multiline {
+    width: 500px;
+    font-size: 1.2em;
+    display: block;
+    display: -webkit-box;
+    height: 4.5em;
+    line-height: 1.5;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Hide Visually
+   ========================================================================== */
+a {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/* Clear Fix
+   ========================================================================== */
+.cfx:after {
+    content: '';
+    display: block;
     clear: both;
-}
-
-.woo {
-    float: left;
-}
-
-.cfx:after,
-.cfx:before {
-    display: table;
-    content: ' ';
 }
 
 .cfx:after {
+    content: '';
+    display: block;
     clear: both;
+}
+
+.cfx {
+    color: #000;
+}
+
+/* Text Hide
+   ========================================================================== */
+.text-hide {
+    background: #000;
+    color: #fff;
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}
+
+/* Horizontal Rule
+   ========================================================================== */
+hr {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cecece;
+    margin: 3em 0;
+}
+
+.custom-hr {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid red;
+    margin: 1em 0;
+}
+
+/* Circle
+   ========================================================================== */
+.circle {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+/* Reset List
+   ========================================================================== */
+ul {
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+ul li {
+    list-style: none;
+}
+
+/* Aspect Ratio
+   ========================================================================== */
+.box-16-9 {
+    background-color: #ccc;
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+}
+
+.box-4-3 {
+    background-color: #ccc;
+    margin-bottom: 20px;
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 75%;
+}
+
+.aspect-default {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+}
+
+/* Center Block
+   ========================================================================== */
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Center
+   ========================================================================== */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

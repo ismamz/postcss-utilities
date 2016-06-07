@@ -1,11 +1,11 @@
 .selector {
-	color: #fff;
-  	float: right;
+    color: #fff;
+    float: right;
 }
 
 @util hd {
   .foo {
-  	float: right;
+    float: right;
     top: 0;
   }
 
@@ -15,10 +15,16 @@
 }
 
 .foo {
-	color: red;
+    color: red;
 }
 
-@util hd(1.5, 192dpi) {
+@util hd(1.25dppx) {
+  .bar {
+    border: 0;
+  }
+}
+
+@util hd(192dpi) {
   .bar {
     border: 0;
   }

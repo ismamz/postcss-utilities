@@ -86,6 +86,10 @@ ul {
     @util aspect-ratio(4:3);
 }
 
+.aspect-default {
+    @util aspect-ratio;
+}
+
 /* Center Block
    ========================================================================== */
 .center-block {

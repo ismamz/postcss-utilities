@@ -11,7 +11,7 @@ var clearfixIE8       = require('./lib/clearfix-ie8');
 var hdBreakpoint      = require('./lib/hd-breakpoint');
 var hideVisually      = require('./lib/hide-visually');
 var horizontalRule    = require('./lib/horizontal-rule');
-var hover             = require('./lib/hover');
+var noHover           = require('./lib/no-hover');
 var noJs              = require('./lib/no-js');
 var resetList         = require('./lib/reset-list');
 var textHide          = require('./lib/text-hide');
@@ -30,7 +30,7 @@ var names = [
     'hd',
     'hide-visually',
     'hr',
-    'hover',
+    'no-hover',
     'no-js',
     'reset-list',
     'text-hide',
@@ -68,7 +68,7 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
 
             switch (name) {
             case 'aspect-ratio':
-                if (args.length !== 3) {
+                if (args.length > 1 && args.length !== 3) {
                     result.warn('Aspect Ratio utility requires 1 parameter:' +
                                 ' [ratio]' +
                                 ' Two integers separates by ":". Ex: 16:9');
@@ -95,6 +95,10 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                 clearfixIE8(util);
                 break;
             case 'hd':
+                if (args.length > 1 && args.length !== 2) {
+                    result.warn('HD Breakpoint utility requires 1 ' +
+                                'parameters: [min-resolution].');
+                }
                 hdBreakpoint(util, args, postcss);
                 break;
             case 'hide-visually':
@@ -107,8 +111,8 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                 }
                 horizontalRule(util, args);
                 break;
-            case 'hover':
-                hover(util, postcss);
+            case 'no-hover':
+                noHover(util, postcss);
                 break;
             case 'no-js':
                 noJs(util, postcss);
@@ -120,7 +124,7 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                 textHide(util);
                 break;
             case 'triangle':
-                if (args.length !== 4) {
+                if (args.length > 1 && args.length !== 4) {
                     result.warn('Triangle utility requires 2 parameters:' +
                                 ' [size], [color], [orientation].');
                 }

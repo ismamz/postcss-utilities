@@ -1,11 +1,11 @@
 .selector {
-	color: #fff;
-  	float: right;
+    color: #fff;
+    float: right;
 }
 
-@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+@media print, (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   .foo {
-  	float: right;
+    float: right;
     top: 0;
   }
 
@@ -15,10 +15,16 @@
 }
 
 .foo {
-	color: red;
+    color: red;
 }
 
-@media print, (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 192dpi) {
+@media print, (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  .bar {
+    border: 0;
+  }
+}
+
+@media print, (min-resolution: 2dppx), (min-resolution: 192dpi) {
   .bar {
     border: 0;
   }

@@ -38,7 +38,7 @@
   "eslintConfig": {
     "extends": "postcss/es5",
     "rules": {
-      "complexity": ["error", { "max": 23 }]
+      "complexity": ["error", { "max": 24 }]
     }
   }
 }

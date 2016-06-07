@@ -39,3 +39,7 @@
     @util triangle(20px, gray, down-right);
     display: inline-block;
 }
+
+.triangle-default {
+    @util triangle;
+}

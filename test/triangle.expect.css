@@ -67,3 +67,11 @@
     border-bottom: 20px solid gray;
     border-left: 20px solid transparent;
 }
+
+.triangle-default {
+    height: 0;
+    width: 0;
+    border-top: 20px solid #000;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+}
