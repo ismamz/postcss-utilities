@@ -24,7 +24,7 @@
 - [hd breakpoint](http://ismamz.github.io/postcss-utilities/docs#hd-breakpoint)
 - [hide-visually](http://ismamz.github.io/postcss-utilities/docs#hide-visually)
 - [hr](http://ismamz.github.io/postcss-utilities/docs#horizontal-rule)
-- [hover](http://ismamz.github.io/postcss-utilities/docs#hover)
+- [no-hover](http://ismamz.github.io/postcss-utilities/docs#no-hover)
 - [no-js](http://ismamz.github.io/postcss-utilities/docs#no-js)
 - [reset-list](http://ismamz.github.io/postcss-utilities/docs#reset-list)
 - [text-hide](http://ismamz.github.io/postcss-utilities/docs#text-hide)
