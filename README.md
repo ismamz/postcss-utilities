@@ -1,7 +1,7 @@
 # PostCSS Utility Library [![Build Status][ci-img]][ci]
 
 <p align="center">
-    <a href="http://ismamz.github.io/postcss-utilities">
+    <a href="https://ismamz.github.io/postcss-utilities">
         <img src="https://github.com/ismamz/postcss-utilities/blob/master/media/logo.png" alt="PostCSS Utility Library">
     </a>
 </p>
@@ -12,24 +12,24 @@
 
 [postcss-utilities](http://github.io/ismamz/postcss-utilities) is a [PostCSS] plugin that have the most used mixins, shortcuts and helpers to use as `@util` rules in yours stylesheets.
 
-<h3 align="center"><a href="http://ismamz.github.io/postcss-utilities">See Documentation</a></h3>
+<h3 align="center"><a href="https://ismamz.github.io/postcss-utilities">See Documentation</a></h3>
 
 ### List of Utilities
 
-- [aspect-ratio](http://ismamz.github.io/postcss-utilities/docs#aspect-ratio)
-- [center](http://ismamz.github.io/postcss-utilities/docs#center)
-- [center-block](http://ismamz.github.io/postcss-utilities/docs#center-block)
-- [circle](http://ismamz.github.io/postcss-utilities/docs#circle)
-- [clearfix](http://ismamz.github.io/postcss-utilities/docs#clear-fix)
-- [hd breakpoint](http://ismamz.github.io/postcss-utilities/docs#hd-breakpoint)
-- [hide-visually](http://ismamz.github.io/postcss-utilities/docs#hide-visually)
-- [hr](http://ismamz.github.io/postcss-utilities/docs#horizontal-rule)
-- [no-hover](http://ismamz.github.io/postcss-utilities/docs#no-hover)
-- [no-js](http://ismamz.github.io/postcss-utilities/docs#no-js)
-- [reset-list](http://ismamz.github.io/postcss-utilities/docs#reset-list)
-- [text-hide](http://ismamz.github.io/postcss-utilities/docs#text-hide)
-- [triangle](http://ismamz.github.io/postcss-utilities/docs#triangle)
-- [truncate](http://ismamz.github.io/postcss-utilities/docs#truncate)
+- [aspect-ratio](https://ismamz.github.io/postcss-utilities/docs#aspect-ratio)
+- [center](https://ismamz.github.io/postcss-utilities/docs#center)
+- [center-block](https://ismamz.github.io/postcss-utilities/docs#center-block)
+- [circle](https://ismamz.github.io/postcss-utilities/docs#circle)
+- [clearfix](https://ismamz.github.io/postcss-utilities/docs#clear-fix)
+- [hd breakpoint](https://ismamz.github.io/postcss-utilities/docs#hd-breakpoint)
+- [hide-visually](https://ismamz.github.io/postcss-utilities/docs#hide-visually)
+- [hr](https://ismamz.github.io/postcss-utilities/docs#horizontal-rule)
+- [no-hover](https://ismamz.github.io/postcss-utilities/docs#no-hover)
+- [no-js](https://ismamz.github.io/postcss-utilities/docs#no-js)
+- [reset-list](https://ismamz.github.io/postcss-utilities/docs#reset-list)
+- [text-hide](https://ismamz.github.io/postcss-utilities/docs#text-hide)
+- [triangle](https://ismamz.github.io/postcss-utilities/docs#triangle)
+- [truncate](https://ismamz.github.io/postcss-utilities/docs#truncate)
 
 ### What is the difference with preprocessor’s mixins libraries?
 
