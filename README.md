@@ -1,3 +1,3 @@
 # PostCSS Utility Library
 
-Visit the project site: [http://ismamz.github.io/postcss-utilities](http://ismamz.github.io/postcss-utilities)
+Visit the project site: [https://ismamz.github.io/postcss-utilities](https://ismamz.github.io/postcss-utilities)
