@@ -144,24 +144,27 @@ Read more:
 ## HD Breakpoint
 
 <div class="util">
-{% highlight css %}@util hd [min-resolution] {
+{% highlight css %}@util hd([min-resolution]) {
   [nested-rules]
 }{% endhighlight %}
 </div>
 
 Style adjustments for high resolution devices.
 
+Since `dppx` is not supported by all browsers the media query still needs the `dpi` fallback.
+
 Read more:
 
-- [HTML5 Boilerplate - Include a HiDPI closure in the sample media queries](https://github.com/h5bp/html5-boilerplate/issues/1127)
+- [HTML5 Boilerplate - The high resolution media query](https://github.com/h5bp/html5-boilerplate/commit/0d9f00826ac4a0154b6f2ed7ad0c127a124e3c34)
 - [MDN - `<resolution>`](https://developer.mozilla.org/en-US/docs/Web/CSS/resolution)
 
 #### Parameters
 
 | Parameter | Type | Default | Optional |
 |-----------|------|---------|----------|
-| min-device-pixel-ratio | pixel-ratio | `1.25` | Yes |
-| min-resolution | resolution value | `120dpi` | Yes |
+| min-resolution | resolution value (dpi | dppx) | `120dpi` | Yes |
+
+**Note:** If you set `dpi` the utility will calculate the `dppx` equivalent, and vice versa.
 
 <div class="row">
   <div class="col-6 col-sm-12">
