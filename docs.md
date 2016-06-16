@@ -151,8 +151,6 @@ Read more:
 
 Style adjustments for high resolution devices.
 
-Since `dppx` is not supported by all browsers the media query still needs the `dpi` fallback.
-
 Read more:
 
 - [HTML5 Boilerplate - The high resolution media query](https://github.com/h5bp/html5-boilerplate/commit/0d9f00826ac4a0154b6f2ed7ad0c127a124e3c34)

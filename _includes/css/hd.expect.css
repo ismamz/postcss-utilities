@@ -5,3 +5,11 @@
     border: 0;
   }
 }
+
+@media print,
+       (min-resolution: 2dppx),
+       (min-resolution: 192dpi) {
+  .bar {
+    float: left;
+  }
+}

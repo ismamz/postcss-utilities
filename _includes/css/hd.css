@@ -3,3 +3,9 @@
     float: right;
   }
 }
+
+@util hd(192dpi) {
+  .bar {
+    float: left;
+  }
+}
