@@ -6,22 +6,27 @@
     </a>
 </p>
 
+
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/ismamz/postcss-utilities.svg
 [ci]:      https://travis-ci.org/ismamz/postcss-utilities
+p
+Let's face it. You don't have time to write your own mixins, helpers or shortcuts for your next project. Let [postcss-utilities](http://github.io/ismamz/postcss-utilities) help you instead. postcss-utilities is a [PostCSS] plugin that includes the most commonly used mixins, shortcuts and helpers. It's as easy as specifying `@util nameoftheutiliti` in your stylesheet, and let postcss--utilities handle the rest for you.
 
-Let's face it. You don't have time to write your own mixins, helpers or shortcuts for your next project. Let [postcss-utilities](http://github.io/ismamz/postcss-utilities) help you instead. postcss-utilities is a [PostCSS] plugin that includes the most commonly used mixins, shortcuts and helpers. All you have to do is use `@util nameofutiliti` in your stylesheet and let it handle the rest for you.
 
+<h3 align="center"><a href="https://ismamz.github.io/postcss-utilities">I'm sold. Take me to the documentation</a></h3>
 
-<h3 align="center"><a href="https://ismamz.github.io/postcss-utilities">Click here for detailed Documentation</a></h3>
+<img align="right" width="135" height="95"
+     title="Philosopher’s stone, logo of PostCSS"
+     src="http://postcss.github.io/postcss/logo-leftp.svg">
 
-### What is the difference with preprocessor’s mixins libraries?
+### What is the difference between preprocessor’s mixins libraries?
 
-- You don’t need extra files for mixins.
-- You don’t need mixins for vendor prefixes (use [autoprefixer plugin](https://github.com/postcss/autoprefixer) for that)
-- You can use PostCSS-utilities with LESS, SASS, vanilla CSS or whatever you want.
+- You don’t need extra files in your css codebase for mixins.
+- You don’t need mixins for vendor prefixing (use [autoprefixer plugin](https://github.com/postcss/autoprefixer))
+- You can use postcss-utilities with LESS, SASS, vanilla CSS or whatever you choice.
 
-### List of Utilities
+### List of current utilities
 
 - [aspect-ratio](https://ismamz.github.io/postcss-utilities/docs#aspect-ratio)
 - [center](https://ismamz.github.io/postcss-utilities/docs#center)
@@ -89,6 +94,6 @@ See [PostCSS] docs for examples of your environment.
 ## Contributing
 
 The list of utilities is open for suggestions.
-- Do you think that we should include an new utiliti? [Create an issue with you proposal](https://github.com/ismamz/postcss-utilities/issues/new).
+- Do you think that we should include a new utiliti? [Create an issue with you proposal](https://github.com/ismamz/postcss-utilities/issues/new).
 - Found an issue? [Report it!](https://github.com/ismamz/postcss-utilities/issues/new).
 - Would you like to contribute with code or documentation? [Send a pull request](https://github.com/ismamz/postcss-utilities/pull/new/master)
