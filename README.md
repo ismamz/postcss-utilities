@@ -13,12 +13,7 @@
 
 Let's face it. You don't have time to write your own mixins, helpers or shortcuts for your next project. Let [postcss-utilities](http://github.io/ismamz/postcss-utilities) help you instead. postcss-utilities is a [PostCSS] plugin that includes the most commonly used mixins, shortcuts and helpers. It's as easy as specifying `@util nameoftheutiliti` in your stylesheet, and postcss-utilities will handle the rest for you.
 
-
 <h4 align="center"><a href="https://ismamz.github.io/postcss-utilities">Check out the documentation to get started using postcss-utilities</a></h4>
-
-<img align="right" width="135" height="95"
-     title="Philosopher’s stone, logo of PostCSS"
-     src="http://postcss.github.io/postcss/logo-leftp.svg">
 
 ### What is the difference between preprocessor’s mixins libraries?
 
@@ -84,6 +79,10 @@ Let's face it. You don't have time to write your own mixins, helpers or shortcut
 ```
 
 ## Usage
+
+<img align="right" width="135" height="95"
+     title="Philosopher’s stone, logo of PostCSS"
+     src="http://postcss.github.io/postcss/logo-leftp.svg">
 
 ```js
 postcss([ require('postcss-utilities') ])
