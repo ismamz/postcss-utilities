@@ -10,11 +10,11 @@
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/ismamz/postcss-utilities.svg
 [ci]:      https://travis-ci.org/ismamz/postcss-utilities
-p
-Let's face it. You don't have time to write your own mixins, helpers or shortcuts for your next project. Let [postcss-utilities](http://github.io/ismamz/postcss-utilities) help you instead. postcss-utilities is a [PostCSS] plugin that includes the most commonly used mixins, shortcuts and helpers. It's as easy as specifying `@util nameoftheutiliti` in your stylesheet, and let postcss--utilities handle the rest for you.
+
+Let's face it. You don't have time to write your own mixins, helpers or shortcuts for your next project. Let [postcss-utilities](http://github.io/ismamz/postcss-utilities) help you instead. postcss-utilities is a [PostCSS] plugin that includes the most commonly used mixins, shortcuts and helpers. It's as easy as specifying `@util nameoftheutiliti` in your stylesheet, and postcss-utilities will handle the rest for you.
 
 
-<h3 align="center"><a href="https://ismamz.github.io/postcss-utilities">I'm sold. Take me to the documentation</a></h3>
+<h4 align="center"><a href="https://ismamz.github.io/postcss-utilities">Check out the documentation to get started using postcss-utilities</a></h4>
 
 <img align="right" width="135" height="95"
      title="Philosopher’s stone, logo of PostCSS"
@@ -22,7 +22,7 @@ Let's face it. You don't have time to write your own mixins, helpers or shortcut
 
 ### What is the difference between preprocessor’s mixins libraries?
 
-- You don’t need extra files in your css codebase for mixins.
+- You don’t need the extra files in your css codebase for mixins.
 - You don’t need mixins for vendor prefixing (use [autoprefixer plugin](https://github.com/postcss/autoprefixer))
 - You can use postcss-utilities with LESS, SASS, vanilla CSS or whatever you choice.
 
