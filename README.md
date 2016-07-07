@@ -22,7 +22,7 @@ postcss-utilities is a [PostCSS] plugin that includes the most commonly used mix
 
 PostCSS has a lot of plugins and some of them use non-standar CSS properties to work as mixins or helpers. This is not a best way for a PostCSS plugin, because developers will not understand what is the source of this property.
 
-> "This plugin saves us from many tiny plugins with unknown properties" _‒[@ai](https://github.com/ai) proposal [postcss/issues/645](postcss/postcss/issues/645)_
+> "This plugin saves us from many tiny plugins with unknown properties" _‒[@ai](https://github.com/ai) proposal [postcss/issues/645](https://github.com/postcss/postcss/issues/645)_
 
 ### What is the difference between preprocessor’s mixins libraries?
 
@@ -107,3 +107,8 @@ The list of utilities is open for suggestions.
 - Do you think that we should include a new utility? [Create an issue with you proposal](https://github.com/ismamz/postcss-utilities/issues/new).
 - Found an issue? [Report it!](https://github.com/ismamz/postcss-utilities/issues/new).
 - Would you like to contribute with code or documentation? [Send a pull request](https://github.com/ismamz/postcss-utilities/pull/new/master)
+
+## Contributors
+
+- [Marcus Tisäter](https://github.com/marcustisater)
+
