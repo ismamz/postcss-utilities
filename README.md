@@ -6,14 +6,23 @@
     </a>
 </p>
 
-
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/ismamz/postcss-utilities.svg
 [ci]:      https://travis-ci.org/ismamz/postcss-utilities
 
-Let's face it. You don't have time to write your own mixins, helpers or shortcuts for your next project. Let [postcss-utilities](http://github.io/ismamz/postcss-utilities) help you instead. postcss-utilities is a [PostCSS] plugin that includes the most commonly used mixins, shortcuts and helpers. It's as easy as specifying `@util nameoftheutiliti` in your stylesheet, and postcss-utilities will handle the rest for you.
+Let's face it. You don't have time to write your own mixins, helpers or shortcuts for your next project. Let [postcss-utilities](http://github.io/ismamz/postcss-utilities) help you instead.
+
+postcss-utilities is a [PostCSS] plugin that includes the most commonly used mixins, shortcuts and helpers. It's as easy as specifying `@util utility-name` in your stylesheet, and postcss-utilities will handle the rest for you.
 
 <h4 align="center"><a href="https://ismamz.github.io/postcss-utilities">Check out the documentation to get started using postcss-utilities</a></h4>
+
+<h5 align="center"><a href="https://ismamz.github.io/postcss-utilities/playground/">Try it in the browser!</a></h5>
+
+### Motivation
+
+PostCSS has a lot of plugins and some of them use non-standar CSS properties to work as mixins or helpers. This is not a best way for a PostCSS plugin, because developers will not understand what is the source of this property.
+
+> "This plugin saves us from many tiny plugins with unknown properties" _‒[@ai](https://github.com/ai) proposal [postcss/issues/645](postcss/postcss/issues/645)_
 
 ### What is the difference between preprocessor’s mixins libraries?
 
@@ -22,6 +31,8 @@ Let's face it. You don't have time to write your own mixins, helpers or shortcut
 - You can use postcss-utilities with LESS, SASS, vanilla CSS or whatever you choice.
 
 ### List of current utilities
+
+**IMPORTANT**: The list of utilities is open for suggestions.
 
 - [aspect-ratio](https://ismamz.github.io/postcss-utilities/docs#aspect-ratio)
 - [center](https://ismamz.github.io/postcss-utilities/docs#center)
@@ -93,6 +104,6 @@ See [PostCSS] docs for examples of your environment.
 ## Contributing
 
 The list of utilities is open for suggestions.
-- Do you think that we should include a new utiliti? [Create an issue with you proposal](https://github.com/ismamz/postcss-utilities/issues/new).
+- Do you think that we should include a new utility? [Create an issue with you proposal](https://github.com/ismamz/postcss-utilities/issues/new).
 - Found an issue? [Report it!](https://github.com/ismamz/postcss-utilities/issues/new).
 - Would you like to contribute with code or documentation? [Send a pull request](https://github.com/ismamz/postcss-utilities/pull/new/master)
