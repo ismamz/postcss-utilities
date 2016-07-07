@@ -6,15 +6,22 @@
     </a>
 </p>
 
+
 [PostCSS]: https://github.com/postcss/postcss
 [ci-img]:  https://travis-ci.org/ismamz/postcss-utilities.svg
 [ci]:      https://travis-ci.org/ismamz/postcss-utilities
 
-[postcss-utilities](http://github.io/ismamz/postcss-utilities) is a [PostCSS] plugin that have the most used mixins, shortcuts and helpers to use as `@util` rules in yours stylesheets.
+Let's face it. You don't have time to write your own mixins, helpers or shortcuts for your next project. Let [postcss-utilities](http://github.io/ismamz/postcss-utilities) help you instead. postcss-utilities is a [PostCSS] plugin that includes the most commonly used mixins, shortcuts and helpers. It's as easy as specifying `@util nameoftheutiliti` in your stylesheet, and postcss-utilities will handle the rest for you.
 
-<h3 align="center"><a href="https://ismamz.github.io/postcss-utilities">See Documentation</a></h3>
+<h4 align="center"><a href="https://ismamz.github.io/postcss-utilities">Check out the documentation to get started using postcss-utilities</a></h4>
 
-### List of Utilities
+### What is the difference between preprocessor’s mixins libraries?
+
+- You don’t need the extra files in your css codebase for mixins.
+- You don’t need mixins for vendor prefixing (use [autoprefixer plugin](https://github.com/postcss/autoprefixer))
+- You can use postcss-utilities with LESS, SASS, vanilla CSS or whatever you choice.
+
+### List of current utilities
 
 - [aspect-ratio](https://ismamz.github.io/postcss-utilities/docs#aspect-ratio)
 - [center](https://ismamz.github.io/postcss-utilities/docs#center)
@@ -31,20 +38,11 @@
 - [triangle](https://ismamz.github.io/postcss-utilities/docs#triangle)
 - [truncate](https://ismamz.github.io/postcss-utilities/docs#truncate)
 
-### What is the difference with preprocessor’s mixins libraries?
-
-- You don’t need extra files for mixins.
-- You don’t need mixins for vendor prefixes (use [autoprefixer plugin](https://github.com/postcss/autoprefixer) for that)
-- You can use with LESS, SASS, pure CSS or whatever you want.
 
 ## Examples
 
 ### Input
 ```css
-.truncate {
-    @util truncate;
-    width: 500px;
-}
 
 .cfx {
     @util clearfix;
@@ -56,19 +54,10 @@
     @util aspect-ratio(16:9);
 }
 
-.circle {
-    @util circle(200px, red);
-}
 ```
 
 ### Output
 ```css
-.truncate {
-    width: 500px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 
 .cfx:after {
     content: '';
@@ -87,26 +76,23 @@
     padding-bottom: 56.25%;
 }
 
-.circle {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    background-color: red;
-}
 ```
 
 ## Usage
+
+<img align="right" width="135" height="95"
+     title="Philosopher’s stone, logo of PostCSS"
+     src="http://postcss.github.io/postcss/logo-leftp.svg">
 
 ```js
 postcss([ require('postcss-utilities') ])
 ```
 
-See [PostCSS] docs for examples for your environment.
+See [PostCSS] docs for examples of your environment.
 
 ## Contributing
 
-The list of utilities is open to new mixins, shortcuts and helpers.
-- Do you think that we should include one? [Create an issue with you proposal](https://github.com/ismamz/postcss-utilities/issues/new).
-- Do you have a problem? [Write an issue](https://github.com/ismamz/postcss-utilities/issues/new).
-- Do you want to contribute with code? [Send a pull request](https://github.com/ismamz/postcss-utilities/pull/new/master)
-- Do you find an error in the documentation? [Fix it in `gh-pages` branch and send a pull request](https://github.com/ismamz/postcss-utilities/tree/gh-pages)
+The list of utilities is open for suggestions.
+- Do you think that we should include a new utiliti? [Create an issue with you proposal](https://github.com/ismamz/postcss-utilities/issues/new).
+- Found an issue? [Report it!](https://github.com/ismamz/postcss-utilities/issues/new).
+- Would you like to contribute with code or documentation? [Send a pull request](https://github.com/ismamz/postcss-utilities/pull/new/master)
