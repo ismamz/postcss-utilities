@@ -61,9 +61,10 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                     node.nodes.forEach(function (i) {
                         if (i.type === 'word') {
                             args.push(i.value);
-                        } else if (i.type === 'function' && i.value === "var" &&
-                                   i.nodes.length === 1) {
-                            args.push('var(' + i.nodes[0].value + ')');
+                        } else if (i.type === 'function' && i.value && i.nodes) {
+                            args.push(i.value + '(' + i.nodes.map(function (p) {
+                                return p.value;
+                            }).join(", ") + ')');
                         }
                     });
                 }
