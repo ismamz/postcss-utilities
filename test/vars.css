@@ -1,0 +1,3 @@
+.circle {
+    @util circle(var(--size), red);
+}
