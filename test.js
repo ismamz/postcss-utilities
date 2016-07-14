@@ -107,6 +107,12 @@ test('clearfix ie8', t => {
     return run(t, input, output, { });
 });
 
+test('var support', t => {
+    var input = fs.readFileSync('test/vars.css', 'utf8');
+    var output = fs.readFileSync('test/vars.expect.css', 'utf8');
+    return run(t, input, output, {});
+});
+
 test('all', t => {
     var input = fs.readFileSync('test/test.css', 'utf8');
     var output = fs.readFileSync('test/test.expect.css', 'utf8');

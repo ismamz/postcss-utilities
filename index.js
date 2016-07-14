@@ -38,6 +38,16 @@ var names = [
     'truncate'
 ];
 
+function stringifyNode(node) {
+    if (node.type === 'function') {
+        return (node.before || '') +
+                node.value + '(' + node.nodes.map(stringifyNode).join('') + ')' +
+                (node.after || '');
+    } else {
+        return (node.before || '') + node.value + (node.after || '');
+    }
+}
+
 // main plugin
 module.exports = postcss.plugin('postcss-utilities', function (opts) {
     opts = opts || {};
@@ -59,8 +69,8 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
             str.nodes.forEach(function (node) {
                 if (node.type === 'function') {
                     node.nodes.forEach(function (i) {
-                        if (i.type === 'word') {
-                            args.push(i.value);
+                        if (i.type === 'word' || i.type === 'function') {
+                            args.push(stringifyNode(i));
                         }
                     });
                 }

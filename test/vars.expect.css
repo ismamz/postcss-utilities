@@ -1,0 +1,14 @@
+.circle {
+    border-radius: 50%;
+    width: var(--size);
+    height: var(--size);
+    background-color: getcolor();
+}
+
+.triangle {
+    height: 0;
+    width: 0;
+    border-top: var(--size) solid rgba(255, 0, 255, 1);
+    border-right: var(--size) solid transparent;
+    border-left: var(--size) solid transparent;
+}

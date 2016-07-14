@@ -1,0 +1,7 @@
+.circle {
+    @util circle(var(--size), getcolor());
+}
+
+.triangle {
+    @util triangle(var(--size), rgba(255, 0, 255, 1), down);
+}
