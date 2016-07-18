@@ -54,14 +54,14 @@ a {
     clear: both;
 }
 
+.cfx {
+    color: #000;
+}
+
 .cfx:after {
     content: '';
     display: block;
     clear: both;
-}
-
-.cfx {
-    color: #000;
 }
 
 /* Text Hide

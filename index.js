@@ -40,8 +40,8 @@ var names = [
 
 function stringifyNode(node) {
     if (node.type === 'function') {
-        return (node.before || '') +
-                node.value + '(' + node.nodes.map(stringifyNode).join('') + ')' +
+        return (node.before || '') + node.value +
+                '(' + node.nodes.map(stringifyNode).join('') + ')' +
                 (node.after || '');
     } else {
         return (node.before || '') + node.value + (node.after || '');
