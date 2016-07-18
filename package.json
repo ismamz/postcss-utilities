@@ -1,6 +1,6 @@
 {
   "name": "postcss-utilities",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "PostCSS plugin to add a collection of mixins, shortcuts, helpers and tools for yout CSS",
   "keywords": [
     "postcss",
@@ -38,7 +38,12 @@
   "eslintConfig": {
     "extends": "postcss/es5",
     "rules": {
-      "complexity": ["error", { "max": 24 }]
+      "complexity": [
+        "error",
+        {
+          "max": 24
+        }
+      ]
     }
   }
 }
