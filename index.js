@@ -69,7 +69,8 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
             str.nodes.forEach(function (node) {
                 if (node.type === 'function') {
                     node.nodes.forEach(function (i) {
-                        if (i.type === 'word' || i.type === 'function') {
+                        if (i.type === 'word' || i.type === 'function' ||
+                            i.type === 'string') {
                             args.push(stringifyNode(i));
                         }
                     });
