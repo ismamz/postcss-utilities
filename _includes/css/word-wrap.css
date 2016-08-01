@@ -1,0 +1,7 @@
+.foo {
+    @util word-wrap;
+}
+
+.bar {
+    @util word-wrap(normal);
+}

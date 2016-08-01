@@ -1,0 +1,11 @@
+.foo {
+  overflow-wrap: break-word;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.bar {
+  overflow-wrap: normal;
+  word-break: normal;
+  word-wrap: normal;
+}

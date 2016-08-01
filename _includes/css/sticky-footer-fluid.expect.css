@@ -1,0 +1,12 @@
+.wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.footer {
+    background: black;
+    color: white;
+    display: table-row;
+    height: 1px;
+}

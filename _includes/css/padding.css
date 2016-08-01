@@ -1,0 +1,3 @@
+.foo {
+    @util padding(1em null 20px 3%);
+}
