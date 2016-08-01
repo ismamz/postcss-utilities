@@ -113,8 +113,74 @@ test('var support', t => {
     return run(t, input, output, {});
 });
 
+test('word wrap', t => {
+    var input = fs.readFileSync('test/word-wrap.css', 'utf8');
+    var output = fs.readFileSync('test/word-wrap.expect.css', 'utf8');
+    return run(t, input, output, {});
+});
+
+test('size', t => {
+    var input = fs.readFileSync('test/size.css', 'utf8');
+    var output = fs.readFileSync('test/size.expect.css', 'utf8');
+    return run(t, input, output, {});
+});
+
+test('sticky footer', t => {
+    var input = fs.readFileSync('test/sticky-footer.css', 'utf8');
+    var output = fs.readFileSync('test/sticky-footer.expect.css', 'utf8');
+    return run(t, input, output, {});
+});
+
+test('reset text', t => {
+    var input = fs.readFileSync('test/reset-text.css', 'utf8');
+    var output = fs.readFileSync('test/reset-text.expect.css', 'utf8');
+    return run(t, input, output, {});
+});
+
+test('border color', t => {
+    var input = fs.readFileSync('test/border-color.css', 'utf8');
+    var output = fs.readFileSync('test/border-color.expect.css', 'utf8');
+    return run(t, input, output, { });
+});
+
 test('all', t => {
     var input = fs.readFileSync('test/test.css', 'utf8');
     var output = fs.readFileSync('test/test.expect.css', 'utf8');
+    return run(t, input, output, { });
+});
+
+test('border style', t => {
+    var input = fs.readFileSync('test/border-style.css', 'utf8');
+    var output = fs.readFileSync('test/border-style.expect.css', 'utf8');
+    return run(t, input, output, { });
+});
+
+test('border width', t => {
+    var input = fs.readFileSync('test/border-width.css', 'utf8');
+    var output = fs.readFileSync('test/border-width.expect.css', 'utf8');
+    return run(t, input, output, { });
+});
+
+test('padding', t => {
+    var input = fs.readFileSync('test/padding.css', 'utf8');
+    var output = fs.readFileSync('test/padding.expect.css', 'utf8');
+    return run(t, input, output, { });
+});
+
+test('margin', t => {
+    var input = fs.readFileSync('test/margin.css', 'utf8');
+    var output = fs.readFileSync('test/margin.expect.css', 'utf8');
+    return run(t, input, output, { });
+});
+
+test('border radius', t => {
+    var input = fs.readFileSync('test/border-radius.css', 'utf8');
+    var output = fs.readFileSync('test/border-radius.expect.css', 'utf8');
+    return run(t, input, output, { });
+});
+
+test('position', t => {
+    var input = fs.readFileSync('test/position.css', 'utf8');
+    var output = fs.readFileSync('test/position.expect.css', 'utf8');
     return run(t, input, output, { });
 });
