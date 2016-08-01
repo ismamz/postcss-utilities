@@ -2,26 +2,48 @@ var postcss = require('postcss');
 var parser  = require('postcss-value-parser');
 
 // import functions
-var aspectRatio       = require('./lib/aspect-ratio');
-var center            = require('./lib/center');
-var centerBlock       = require('./lib/center-block');
-var circle            = require('./lib/circle');
-var clearfix          = require('./lib/clearfix');
-var clearfixIE8       = require('./lib/clearfix-ie8');
-var hdBreakpoint      = require('./lib/hd-breakpoint');
-var hideVisually      = require('./lib/hide-visually');
-var horizontalRule    = require('./lib/horizontal-rule');
-var noHover           = require('./lib/no-hover');
-var noJs              = require('./lib/no-js');
-var resetList         = require('./lib/reset-list');
-var textHide          = require('./lib/text-hide');
-var triangle          = require('./lib/triangle');
-var truncate          = require('./lib/truncate');
-var truncateMultiline = require('./lib/truncate-multiline');
+var aspectRatio        = require('./lib/aspect-ratio');
+var borderColor        = require('./lib/border-color');
+var borderTopRadius    = require('./lib/border-top-radius');
+var borderRightRadius  = require('./lib/border-right-radius');
+var borderBottomRadius = require('./lib/border-bottom-radius');
+var borderLeftRadius   = require('./lib/border-left-radius');
+var borderStyle        = require('./lib/border-style');
+var borderWidth        = require('./lib/border-width');
+var center             = require('./lib/center');
+var centerBlock        = require('./lib/center-block');
+var circle             = require('./lib/circle');
+var clearfix           = require('./lib/clearfix');
+var clearfixIE8        = require('./lib/clearfix-ie8');
+var hdBreakpoint       = require('./lib/hd-breakpoint');
+var hideVisually       = require('./lib/hide-visually');
+var horizontalRule     = require('./lib/horizontal-rule');
+var margin             = require('./lib/margin');
+var noHover            = require('./lib/no-hover');
+var noJs               = require('./lib/no-js');
+var padding            = require('./lib/padding');
+var position            = require('./lib/position');
+var resetList          = require('./lib/reset-list');
+var resetText          = require('./lib/reset-text');
+var size               = require('./lib/size');
+var stickyFooter       = require('./lib/sticky-footer');
+var stickyFooterFluid  = require('./lib/sticky-footer-fluid');
+var textHide           = require('./lib/text-hide');
+var triangle           = require('./lib/triangle');
+var truncate           = require('./lib/truncate');
+var truncateMultiline  = require('./lib/truncate-multiline');
+var wordWrap           = require('./lib/word-wrap');
 
 // list of utilities names
 var names = [
     'aspect-ratio',
+    'border-color',
+    'border-top-radius',
+    'border-right-radius',
+    'border-bottom-radius',
+    'border-left-radius',
+    'border-style',
+    'border-width',
     'center',
     'center-block',
     'circle',
@@ -30,12 +52,19 @@ var names = [
     'hd',
     'hide-visually',
     'hr',
+    'margin',
     'no-hover',
     'no-js',
+    'padding',
+    'position',
     'reset-list',
+    'reset-text',
+    'size',
+    'sticky-footer',
     'text-hide',
     'triangle',
-    'truncate'
+    'truncate',
+    'word-wrap'
 ];
 
 function stringifyNode(node) {
@@ -86,6 +115,42 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                 }
                 aspectRatio(util, args);
                 break;
+            case 'border-color':
+                if (args.length > 1) {
+                    borderColor(util, args);
+                } else {
+                    result.warn('Border Color utility requires at least 1 ' +
+                            'parameter. [colors separated by spaces]');
+                }
+                break;
+            case 'border-top-radius':
+                borderTopRadius(util, args);
+                break;
+            case 'border-right-radius':
+                borderRightRadius(util, args);
+                break;
+            case 'border-bottom-radius':
+                borderBottomRadius(util, args);
+                break;
+            case 'border-left-radius':
+                borderLeftRadius(util, args);
+                break;
+            case 'border-style':
+                if (args.length > 1) {
+                    borderStyle(util, args);
+                } else {
+                    result.warn('Border Style utility requires at least 1 ' +
+                            'parameter. [border styles separated by spaces]');
+                }
+                break;
+            case 'border-width':
+                if (args.length > 1) {
+                    borderWidth(util, args);
+                } else {
+                    result.warn('Border Width utility requires at least 1 ' +
+                            'parameter. [size values separated by spaces]');
+                }
+                break;
             case 'center':
                 center(util, args);
                 break;
@@ -122,17 +187,67 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                 }
                 horizontalRule(util, args);
                 break;
+            case 'margin':
+                if (args.length > 1) {
+                    margin(util, args);
+                } else {
+                    result.warn('Margin utility requires at least 1 ' +
+                            'parameter. [size values separated by spaces]');
+                }
+                break;
             case 'no-hover':
                 noHover(util, postcss);
                 break;
             case 'no-js':
                 noJs(util, postcss);
                 break;
+            case 'padding':
+                if (args.length > 1) {
+                    padding(util, args);
+                } else {
+                    result.warn('Padding utility requires at least 1 ' +
+                            'parameter. [size values separated by spaces]');
+                }
+                break;
+            case 'position':
+                if (args.length > 1) {
+                    position(util, args);
+                } else {
+                    result.warn('Position utility requires at least 1 ' +
+                            'parameter. [lengths values separated by spaces]');
+                }
+                break;
             case 'reset-list':
                 resetList(util);
                 break;
+            case 'reset-text':
+                resetText(util);
+                break;
+            case 'size':
+                if (args.length === 2 || args.length === 3) {
+                    size(util, args);
+                } else {
+                    result.warn('Invalid number of parameters for Size' +
+                                'utility: [width], [height]');
+                }
+                break;
+            case 'sticky-footer':
+                if (args.length === 1 || args.length === 2) {
+                    stickyFooterFluid(util, args);
+                } else if (args.length === 3 || args.length === 4) {
+                    if (args[1] === 'fixed') {
+                        // switch args to keep sticky-footer.js
+                        args[1] = args[2];
+                        args[2] = args[3];
+                        stickyFooter(util, args);
+                    }
+                } else {
+                    result.warn('Invalid number of parameters for Sticky ' +
+                                'Footer utility:  read the docs.');
+                }
+                break;
             case 'text-hide':
-                textHide(util);
+                textHide(util, args);
                 break;
             case 'triangle':
                 if (args.length > 1 && args.length !== 4) {
@@ -151,6 +266,13 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                 } else {
                     truncate(util);
                 }
+                break;
+            case 'word-wrap':
+                if (args.length > 1 && args.length !== 2) {
+                    result.warn('Word Wrap utility requires 1 ' +
+                                'parameters: [wrap].');
+                }
+                wordWrap(util, args);
                 break;
             default:
                 break;

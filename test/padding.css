@@ -1,0 +1,19 @@
+.one {
+    @util padding(1em);
+}
+
+.two {
+    @util padding(20px 10%);
+}
+
+.three {
+    @util padding(20px 10% 1em);
+}
+
+.four {
+    @util padding(20px null 10% 1em);
+}
+
+.four-equals {
+    @util padding(1em 1em 1em 1em);
+}

@@ -35,6 +35,10 @@ PostCSS has a lot of plugins and some of them use non-standar CSS properties to 
 **IMPORTANT**: The list of utilities is open for suggestions.
 
 - [aspect-ratio](https://ismamz.github.io/postcss-utilities/docs#aspect-ratio)
+- [border-color](https://ismamz.github.io/postcss-utilities/docs#border-color)
+- [border-radius](https://ismamz.github.io/postcss-utilities/docs#border-radius)
+- [border-style](https://ismamz.github.io/postcss-utilities/docs#border-style)
+- [border-width](https://ismamz.github.io/postcss-utilities/docs#border-width)
 - [center](https://ismamz.github.io/postcss-utilities/docs#center)
 - [center-block](https://ismamz.github.io/postcss-utilities/docs#center-block)
 - [circle](https://ismamz.github.io/postcss-utilities/docs#circle)
@@ -42,12 +46,19 @@ PostCSS has a lot of plugins and some of them use non-standar CSS properties to 
 - [hd breakpoint](https://ismamz.github.io/postcss-utilities/docs#hd-breakpoint)
 - [hide-visually](https://ismamz.github.io/postcss-utilities/docs#hide-visually)
 - [hr](https://ismamz.github.io/postcss-utilities/docs#horizontal-rule)
+- [margin](https://ismamz.github.io/postcss-utilities/docs#margin)
 - [no-hover](https://ismamz.github.io/postcss-utilities/docs#no-hover)
 - [no-js](https://ismamz.github.io/postcss-utilities/docs#no-js)
+- [padding](https://ismamz.github.io/postcss-utilities/docs#padding)
+- [position](https://ismamz.github.io/postcss-utilities/docs#position)
 - [reset-list](https://ismamz.github.io/postcss-utilities/docs#reset-list)
+- [reset-text](https://ismamz.github.io/postcss-utilities/docs#reset-text)
+- [size](https://ismamz.github.io/postcss-utilities/docs#size)
+- [sticky-footer](https://ismamz.github.io/postcss-utilities/docs#sticky-footer)
 - [text-hide](https://ismamz.github.io/postcss-utilities/docs#text-hide)
 - [triangle](https://ismamz.github.io/postcss-utilities/docs#triangle)
 - [truncate](https://ismamz.github.io/postcss-utilities/docs#truncate)
+- [word-break](https://ismamz.github.io/postcss-utilities/docs#word-break)
 
 
 ## Examples

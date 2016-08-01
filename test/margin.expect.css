@@ -1,0 +1,27 @@
+.one {
+    margin: 1em;
+}
+
+.two {
+    margin-top: 20px;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    margin-left: 10%;
+}
+
+.three {
+    margin-top: 20px;
+    margin-right: 10%;
+    margin-bottom: 1em;
+    margin-left: 10%;
+}
+
+.four {
+    margin-top: 20px;
+    margin-bottom: 10%;
+    margin-left: 1em;
+}
+
+.four-equals {
+    margin: 1em;
+}

@@ -1,0 +1,27 @@
+.one {
+    padding: 1em;
+}
+
+.two {
+    padding-top: 20px;
+    padding-right: 10%;
+    padding-bottom: 20px;
+    padding-left: 10%;
+}
+
+.three {
+    padding-top: 20px;
+    padding-right: 10%;
+    padding-bottom: 1em;
+    padding-left: 10%;
+}
+
+.four {
+    padding-top: 20px;
+    padding-bottom: 10%;
+    padding-left: 1em;
+}
+
+.four-equals {
+    padding: 1em;
+}

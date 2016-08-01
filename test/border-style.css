@@ -1,0 +1,19 @@
+.one {
+    @util border-style(dashed);
+}
+
+.two {
+    @util border-style(solid dotted);
+}
+
+.three {
+    @util border-style(solid dashed dotted);
+}
+
+.four {
+    @util border-style(solid null dashed dotted);
+}
+
+.four-equals {
+    @util border-style(solid solid solid solid);
+}

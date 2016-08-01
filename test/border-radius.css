@@ -1,0 +1,15 @@
+.foo {
+    @util border-top-radius(1px);
+}
+
+.foo {
+    @util border-right-radius(2px);
+}
+
+.foo {
+    @util border-bottom-radius(3px);
+}
+
+.foo {
+    @util border-left-radius(4px);
+}

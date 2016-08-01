@@ -1,0 +1,11 @@
+.foo {
+    @util word-wrap;
+}
+
+.bar {
+    @util word-wrap(break-word);
+}
+
+.keep {
+    @util word-wrap(normal);
+}

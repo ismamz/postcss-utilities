@@ -1,0 +1,19 @@
+.one {
+    @util border-color(#fff);
+}
+
+.two {
+    @util border-color(#a60b55 #76cd9c);
+}
+
+.three {
+    @util border-color(#a60b55 #76cd9c #fff);
+}
+
+.four {
+    @util border-color(#a60b55 null #76cd9c #fff);
+}
+
+.four-equals {
+    @util border-color(#fff #fff #fff #fff);
+}

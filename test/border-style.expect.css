@@ -1,0 +1,27 @@
+.one {
+    border-style: dashed;
+}
+
+.two {
+    border-top-style: solid;
+    border-right-style: dotted;
+    border-bottom-style: solid;
+    border-left-style: dotted;
+}
+
+.three {
+    border-top-style: solid;
+    border-right-style: dashed;
+    border-bottom-style: dotted;
+    border-left-style: dashed;
+}
+
+.four {
+    border-top-style: solid;
+    border-bottom-style: dashed;
+    border-left-style: dotted;
+}
+
+.four-equals {
+    border-style: solid;
+}

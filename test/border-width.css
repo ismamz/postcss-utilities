@@ -1,0 +1,19 @@
+.one {
+    @util border-width(3%);
+}
+
+.two {
+    @util border-width(1em 20px);
+}
+
+.three {
+    @util border-width(1em 3% 20px);
+}
+
+.four {
+    @util border-width(1em null 3% 20px);
+}
+
+.four-equals {
+    @util border-width(1em 1em 1em 1em);
+}

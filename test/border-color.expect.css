@@ -1,0 +1,27 @@
+.one {
+    border-color: #fff;
+}
+
+.two {
+    border-top-color: #a60b55;
+    border-right-color: #76cd9c;
+    border-bottom-color: #a60b55;
+    border-left-color: #76cd9c;
+}
+
+.three {
+    border-top-color: #a60b55;
+    border-right-color: #76cd9c;
+    border-bottom-color: #fff;
+    border-left-color: #76cd9c;
+}
+
+.four {
+    border-top-color: #a60b55;
+    border-bottom-color: #76cd9c;
+    border-left-color: #fff;
+}
+
+.four-equals {
+    border-color: #fff;
+}

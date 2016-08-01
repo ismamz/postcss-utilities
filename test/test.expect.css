@@ -76,6 +76,12 @@ a {
     border: 0;
 }
 
+.text-hide-2 {
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+}
+
 /* Horizontal Rule
    ========================================================================== */
 hr {
