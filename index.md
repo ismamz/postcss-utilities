@@ -42,7 +42,7 @@ You can use a PostCSS runner or use directly PostCSS API. Choose your favorite r
   <div class="col-3">
     <ul>
       <li><a href="https://www.npmjs.com/package/broccoli-postcss">broccoli</a></li>
-      <li><a href="https://www.npmjs.com/package/postcss-loader">fly</a></li>
+      <li><a href="https://www.npmjs.com/package/fly-postcss">fly</a></li>
       <li><a href="https://www.npmjs.com/package/postcss-middleware">connect/express</a></li>
       <li><a href="https://www.npmjs.com/package/duo-postcss">duo</a></li>
       <li><a href="https://prepros.io/">Prepros</a></li>
