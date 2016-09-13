@@ -14,15 +14,15 @@ body {
 /* Truncate
    ========================================================================== */
 .truncate {
-    width: 500px;
+    float: left;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    width: 500px;
 }
 
 .multiline {
     width: 500px;
-    font-size: 1.2em;
     display: block;
     display: -webkit-box;
     height: 4.5em;
@@ -31,11 +31,13 @@ body {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: 1.2em;
 }
 
 /* Hide Visually
    ========================================================================== */
 a {
+    float: left;
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -44,6 +46,7 @@ a {
     padding: 0;
     position: absolute;
     width: 1px;
+    color: #fff;
 }
 
 /* Clear Fix
@@ -68,12 +71,12 @@ a {
    ========================================================================== */
 .text-hide {
     background: #000;
-    color: #fff;
     font: 0/0 a;
     color: transparent;
     text-shadow: none;
     background-color: transparent;
     border: 0;
+    color: #fff;
 }
 
 .text-hide-2 {
@@ -85,10 +88,12 @@ a {
 /* Horizontal Rule
    ========================================================================== */
 hr {
+    float: left;
     height: 1px;
     border: 0;
     border-top: 1px solid #cecece;
     margin: 3em 0;
+    color: #fff;
 }
 
 .custom-hr {
@@ -101,19 +106,22 @@ hr {
 /* Circle
    ========================================================================== */
 .circle {
+    float: left;
     border-radius: 50%;
     width: 200px;
     height: 200px;
     background-color: red;
+    color: #fff;
 }
 
 /* Reset List
    ========================================================================== */
 ul {
-    color: #000;
+    float: left;
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 0;
+    color: #000;
 }
 ul li {
     list-style: none;
@@ -123,24 +131,24 @@ ul li {
    ========================================================================== */
 .box-16-9 {
     background-color: #ccc;
-    margin-bottom: 20px;
     position: relative;
     display: block;
     height: 0;
     padding: 0;
     overflow: hidden;
     padding-bottom: 56.25%;
+    margin-bottom: 20px;
 }
 
 .box-4-3 {
     background-color: #ccc;
-    margin-bottom: 20px;
     position: relative;
     display: block;
     height: 0;
     padding: 0;
     overflow: hidden;
     padding-bottom: 75%;
+    margin-bottom: 20px;
 }
 
 .aspect-default {
@@ -155,16 +163,20 @@ ul li {
 /* Center Block
    ========================================================================== */
 .center-block {
+    float: left;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    top: 0;
 }
 
 /* Center
    ========================================================================== */
 .center {
+    float: left;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: #fff;
 }

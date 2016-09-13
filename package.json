@@ -1,7 +1,7 @@
 {
   "name": "postcss-utilities",
-  "version": "0.3.0",
-  "description": "PostCSS plugin to add a collection of mixins, shortcuts, helpers and tools for yout CSS",
+  "version": "0.4.0",
+  "description": "PostCSS plugin to add a collection of mixins, shortcuts, helpers and tools for your CSS",
   "keywords": [
     "postcss",
     "css",
@@ -15,7 +15,7 @@
     "shortcuts",
     "hacks"
   ],
-  "author": "ismamz <ismael@isma.uy>",
+  "author": "Ismael Martínez <ismael@isma.uy>",
   "license": "MIT",
   "repository": "ismamz/postcss-utilities",
   "bugs": {

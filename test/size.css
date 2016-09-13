@@ -1,5 +1,7 @@
 a {
+    color: #fff;
     @util size(2em);
+    float: left;
 }
 
 b {

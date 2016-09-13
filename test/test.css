@@ -14,20 +14,23 @@ body {
 /* Truncate
    ========================================================================== */
 .truncate {
+    float: left;
     @util truncate;
     width: 500px;
 }
 
 .multiline {
     width: 500px;
-    font-size: 1.2em;
     @util truncate(3, 1.5);
+    font-size: 1.2em;
 }
 
 /* Hide Visually
    ========================================================================== */
 a {
+    float: left;
     @util hide-visually;
+    color: #fff;
 }
 
 /* Clear Fix
@@ -56,7 +59,9 @@ a {
 /* Horizontal Rule
    ========================================================================== */
 hr {
+    float: left;
     @util hr;
+    color: #fff;
 }
 
 .custom-hr {
@@ -66,28 +71,31 @@ hr {
 /* Circle
    ========================================================================== */
 .circle {
+    float: left;
     @util circle(200px, red);
+    color: #fff;
 }
 
 /* Reset List
    ========================================================================== */
 ul {
-    color: #000;
+    float: left;
     @util reset-list;
+    color: #000;
 }
 
 /* Aspect Ratio
    ========================================================================== */
 .box-16-9 {
     background-color: #ccc;
-    margin-bottom: 20px;
     @util aspect-ratio(16:9);
+    margin-bottom: 20px;
 }
 
 .box-4-3 {
     background-color: #ccc;
-    margin-bottom: 20px;
     @util aspect-ratio(4:3);
+    margin-bottom: 20px;
 }
 
 .aspect-default {
@@ -97,11 +105,15 @@ ul {
 /* Center Block
    ========================================================================== */
 .center-block {
+    float: left;
     @util center-block;
+    top: 0;
 }
 
 /* Center
    ========================================================================== */
 .center {
+    float: left;
     @util center;
+    color: #fff;
 }

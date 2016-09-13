@@ -1,15 +1,23 @@
 .foo {
+    color: #fff;
     @util border-top-radius(1px);
+    float: left;
 }
 
 .foo {
+    color: #fff;
     @util border-right-radius(2px);
+    float: left;
 }
 
 .foo {
+    color: #fff;
     @util border-bottom-radius(3px);
+    float: left;
 }
 
 .foo {
+    color: #fff;
     @util border-left-radius(4px);
+    float: left;
 }

@@ -1,12 +1,16 @@
 .one {
+    float: left;
     border-color: #fff;
+    color: #fff;
 }
 
 .two {
+    float: left;
     border-top-color: #a60b55;
     border-right-color: #76cd9c;
     border-bottom-color: #a60b55;
     border-left-color: #76cd9c;
+    color: #fff;
 }
 
 .three {

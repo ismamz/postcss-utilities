@@ -1,12 +1,16 @@
 .one {
+    float: left;
     border-style: dashed;
+    color: #fff;
 }
 
 .two {
+    float: left;
     border-top-style: solid;
     border-right-style: dotted;
     border-bottom-style: solid;
     border-left-style: dotted;
+    color: #fff;
 }
 
 .three {

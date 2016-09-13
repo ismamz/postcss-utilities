@@ -1,5 +1,7 @@
 .foo {
+    float: left;
     top: 0;
     left: 10em;
     position: absolute;
+    color: #fff;
 }

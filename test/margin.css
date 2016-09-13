@@ -1,5 +1,7 @@
 .one {
+    float: left;
     @util margin(1em);
+    color: #fff;
 }
 
 .two {

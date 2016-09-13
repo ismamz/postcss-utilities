@@ -1,12 +1,16 @@
 .one {
+    float: left;
     border-width: 3%;
+    color: #fff;
 }
 
 .two {
+    float: left;
     border-top-width: 1em;
     border-right-width: 20px;
     border-bottom-width: 1em;
     border-left-width: 20px;
+    color: #fff;
 }
 
 .three {

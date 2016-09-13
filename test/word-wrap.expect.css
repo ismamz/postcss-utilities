@@ -1,13 +1,17 @@
 .foo {
+    float: left;
     overflow-wrap: break-word;
     word-break: break-all;
     word-wrap: break-word;
+    color: #fff;
 }
 
 .bar {
+    float: left;
     overflow-wrap: break-word;
     word-break: break-all;
     word-wrap: break-word;
+    color: #fff;
 }
 
 .keep {

@@ -7,6 +7,7 @@
     border-top: 12px solid gray;
     border-right: 12px solid transparent;
     border-left: 12px solid transparent;
+    margin-right: 10px;
 }
 
 .triangle-up {

@@ -1,4 +1,5 @@
 .foo {
+    color: #fff;
     font-family: sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -14,4 +15,5 @@
     word-break: normal;
     word-spacing: normal;
     word-wrap: normal;
+    float: left;
 }

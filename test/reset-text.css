@@ -1,3 +1,5 @@
 .foo {
+    color: #fff;
     @util reset-text;
+    float: left;
 }

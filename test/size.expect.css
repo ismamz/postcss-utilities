@@ -1,6 +1,8 @@
 a {
+    color: #fff;
     width: 2em;
     height: 2em;
+    float: left;
 }
 
 b {

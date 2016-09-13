@@ -1,9 +1,13 @@
 .foo {
+    float: left;
     @util word-wrap;
+    color: #fff;
 }
 
 .bar {
+    float: left;
     @util word-wrap(break-word);
+    color: #fff;
 }
 
 .keep {

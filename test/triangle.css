@@ -1,43 +1,44 @@
 /* Triangle
    ========================================================================== */
 .triangle-down {
-    @util triangle(12px, gray, down);
     display: inline-block;
+    @util triangle(12px, gray, down);
+    margin-right: 10px;
 }
 
 .triangle-up {
-    @util triangle(12px, gray, up);
     display: inline-block;
+    @util triangle(12px, gray, up);
 }
 
 .triangle-left {
-    @util triangle(12px, gray, left);
     display: inline-block;
+    @util triangle(12px, gray, left);
 }
 
 .triangle-right {
-    @util triangle(12px, gray, right);
     display: inline-block;
+    @util triangle(12px, gray, right);
 }
 
 .triangle-up-left {
-    @util triangle(20px, gray, up-left);
     display: inline-block;
+    @util triangle(20px, gray, up-left);
 }
 
 .triangle-up-right {
-    @util triangle(20px, gray, up-right);
     display: inline-block;
+    @util triangle(20px, gray, up-right);
 }
 
 .triangle-down-left {
-    @util triangle(20px, gray, down-left);
     display: inline-block;
+    @util triangle(20px, gray, down-left);
 }
 
 .triangle-down-right {
-    @util triangle(20px, gray, down-right);
     display: inline-block;
+    @util triangle(20px, gray, down-right);
 }
 
 .triangle-default {

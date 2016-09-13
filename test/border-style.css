@@ -1,9 +1,13 @@
 .one {
+    float: left;
     @util border-style(dashed);
+    color: #fff;
 }
 
 .two {
+    float: left;
     @util border-style(solid dotted);
+    color: #fff;
 }
 
 .three {

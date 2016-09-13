@@ -3,7 +3,9 @@
 }
 
 .two {
+    float: left;
     @util padding(20px 10%);
+    color: #fff;
 }
 
 .three {
