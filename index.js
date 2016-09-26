@@ -29,6 +29,7 @@ var size               = require('./lib/size');
 var stickyFooter       = require('./lib/sticky-footer');
 var stickyFooterFluid  = require('./lib/sticky-footer-fluid');
 var textHide           = require('./lib/text-hide');
+var textStroke           = require('./lib/text-stroke');
 var triangle           = require('./lib/triangle');
 var truncate           = require('./lib/truncate');
 var truncateMultiline  = require('./lib/truncate-multiline');
@@ -62,6 +63,7 @@ var names = [
     'size',
     'sticky-footer',
     'text-hide',
+    'text-stroke',
     'triangle',
     'truncate',
     'word-wrap'
@@ -248,6 +250,9 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                 break;
             case 'text-hide':
                 textHide(util, args);
+                break;
+            case 'text-stroke':
+                textStroke(util, args);
                 break;
             case 'triangle':
                 if (args.length > 1 && args.length !== 4) {

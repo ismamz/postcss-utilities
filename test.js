@@ -184,3 +184,9 @@ test('position', t => {
     var output = fs.readFileSync('test/position.expect.css', 'utf8');
     return run(t, input, output, { });
 });
+
+test('text-stroke', t => {
+    var input = fs.readFileSync('test/text-stroke.css', 'utf8');
+    var output = fs.readFileSync('test/text-stroke.expect.css', 'utf8');
+    return run(t, input, output, { });
+});

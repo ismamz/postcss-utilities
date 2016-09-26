@@ -1,5 +1,9 @@
 # Change Log
 
+# v0.4.1
+
+- Add text-stroke utility
+
 # v0.4.0
 
 - Change `append` to `replaceWith` method (keep the same atRule position for new declarations)

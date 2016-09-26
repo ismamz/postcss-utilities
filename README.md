@@ -56,6 +56,7 @@ PostCSS has a lot of plugins and some of them use non-standar CSS properties to 
 - [size](https://ismamz.github.io/postcss-utilities/docs#size)
 - [sticky-footer](https://ismamz.github.io/postcss-utilities/docs#sticky-footer)
 - [text-hide](https://ismamz.github.io/postcss-utilities/docs#text-hide)
+- [text-stroke](https://ismamz.github.io/postcss-utilities/docs#text-stroke)
 - [triangle](https://ismamz.github.io/postcss-utilities/docs#triangle)
 - [truncate](https://ismamz.github.io/postcss-utilities/docs#truncate)
 - [word-break](https://ismamz.github.io/postcss-utilities/docs#word-break)

@@ -1,0 +1,7 @@
+.stroke {
+    @util text-stroke(1px, #d50200);
+}
+
+.stroke_3_smooth {
+    @util text-stroke(3px #ececec smooth);
+}
