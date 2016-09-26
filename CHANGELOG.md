@@ -1,5 +1,9 @@
 # Change Log
 
+# v0.5.1
+
+- Change string interpolation to single quotes
+
 # v0.5.0
 
 - Add text-stroke utility
