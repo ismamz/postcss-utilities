@@ -593,6 +593,30 @@ CSS image replacement. Read more: [CSS image replacement technique (HTML5 Boiler
 </div>
 
 
+## Text stroke
+
+<div class="util">{% highlight css %}@util text-stroke([size], [color], [smooth]);{% endhighlight %}</div>
+
+Add text stroke with text shadow effect: [CodePen](http://codepen.io/ismamz/pen/YGkgkZ)
+
+| Parameter | Type | Default | Optional |
+|-----------|------|---------|----------|
+| size  | unit size | `1px` | No |
+| color  | color value | `#000` | No |
+| smooth  | string | - | Yes |
+
+<div class="row">
+  <div class="col-6 col-sm-12">
+    {% highlight css %}{% include css/text-stroke.css %}{% endhighlight %}
+  </div>
+  <div class="col-6 col-sm-12">
+    {% highlight css %}{% include css/text-stroke.expect.css %}{% endhighlight %}
+  </div>
+</div>
+
+**Source:** [postcss-text-stroke](https://github.com/immortal-som/postcss-text-stroke)
+
+
 ## Triangle
 
 <div class="util">

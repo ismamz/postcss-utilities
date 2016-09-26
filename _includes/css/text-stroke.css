@@ -1,0 +1,3 @@
+.stroke {
+    @util text-stroke(1px, #d50200);
+}
