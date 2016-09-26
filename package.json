@@ -1,6 +1,6 @@
 {
   "name": "postcss-utilities",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "PostCSS plugin to add a collection of mixins, shortcuts, helpers and tools for your CSS",
   "keywords": [
     "postcss",
