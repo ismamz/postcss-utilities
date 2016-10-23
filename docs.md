@@ -515,37 +515,15 @@ Sets the `width` and `height` of the element in one statement.
 ### Fluid
 
 <div class="util">
-{% highlight css %}@util sticky-footer([wrapper selector]);{% endhighlight %}
-</div>
-
-Ensure that your fluid-height footer stays down at the bottom of the viewport, no matter what.
-
-| Parameter | Type | Default | Optional |
-|-----------|------|---------|----------|
-| wrapper selector  | string | `".wrapper"` | Yes |
-
-<div class="row">
-  <div class="col-6 col-sm-12">
-    {% highlight css %}{% include css/sticky-footer-fluid.css %}{% endhighlight %}
-  </div>
-  <div class="col-6 col-sm-12">
-    {% highlight css %}{% include css/sticky-footer-fluid.expect.css %}{% endhighlight %}
-  </div>
-</div>
-
-### Fixed
-
-<div class="util">
-{% highlight css %}@util sticky-footer(fixed, [height], [wrapper selector]);{% endhighlight %}
+{% highlight css %}@util sticky-footer([footer height], [wrapper selector]);{% endhighlight %}
 </div>
 
 Ensure that your fixed-height footer stays down at the bottom of the viewport, where God intended it to be, even if your content is too short to keep it down naturally.
 
 | Parameter | Type | Default | Optional |
 |-----------|------|---------|----------|
-| fixed  | - | - | No |
-| height  | unit size | - | No |
-| wrapper selector  | string | `".wrapper"` | Yes |
+| footer height  | size unit | - | No |
+| wrapper selector  | string | `"body"` | Yes |
 
 <div class="row">
   <div class="col-6 col-sm-12">
@@ -556,10 +534,11 @@ Ensure that your fixed-height footer stays down at the bottom of the viewport, w
   </div>
 </div>
 
-**Note:** You should set `height: 100%;` for `html` and `body` tags.
+**Note:** You should set `position: relative;` and `min-height: 100%;` fot `html` tag.
 
 **References:**
 
+- [Modern Clean CSS “Sticky Footer”](http://mystrd.at/modern-clean-css-sticky-footer/)
 - [Sticky Footer, Fixed Height](https://davidtheclark.github.io/scut/sticky-footer-fixed.html)
 - [CSS Tricks - Sticky Footer](https://css-tricks.com/snippets/css/sticky-footer/)
 

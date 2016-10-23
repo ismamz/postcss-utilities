@@ -1,4 +1,3 @@
-.footer {
-    background-color: black;
-    @util sticky-footer(fixed, 4em, ".my-wrapper");
+footer {
+    @util sticky-footer(100px);
 }

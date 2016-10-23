@@ -1,15 +1,11 @@
-.my-wrapper {
-    min-height: 100%;
-    margin-bottom: -4em;
+body {
+    margin-bottom: 100px;
 }
 
-.my-wrapper:after {
-    display: block;
-    content: "";
-    height: 4em;
-}
-
-.footer {
-    background-color: black;
-    height: 4em;
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
 }
