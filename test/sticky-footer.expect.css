@@ -1,44 +1,28 @@
-.test {
+html {
+    position: relative;
     min-height: 100%;
-    margin-bottom: -4em;
 }
 
-.test:after {
-    display: block;
-    content: "";
-    height: 4em;
+body {
+    margin-bottom: 100px;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+}
+
+.wrapper {
+    margin-bottom: 10em;
 }
 
 .footer {
-    background-color: black;
-    height: 4em;
-}
-
-.wrapper {
-    min-height: 100%;
-    margin-bottom: -10em;
-}
-
-.wrapper:after {
-    display: block;
-    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
     height: 10em;
-}
-
-.pie {
-    color: #fff;
-    height: 10em;
-}
-
-.wrapper {
-    display: table;
     width: 100%;
-    height: 100%;
-}
-
-.fluid {
-    background: black;
-    color: white;
-    display: table-row;
-    height: 1px;
 }

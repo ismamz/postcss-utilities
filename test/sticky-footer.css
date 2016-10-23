@@ -1,15 +1,12 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+footer {
+    @util sticky-footer(100px);
+}
+
 .footer {
-    background-color: black;
-    @util sticky-footer(fixed, 4em, ".test");
-}
-
-.pie {
-    color: #fff;
-    @util sticky-footer(fixed, 10em);
-}
-
-.fluid {
-    @util sticky-footer(".wrapper");
-    background: black;
-    color: white;
+    @util sticky-footer(10em, '.wrapper');
 }

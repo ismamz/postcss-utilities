@@ -1,5 +1,9 @@
 # Change Log
 
+# v0.6.0
+
+- Simplify Sticky Footer utility
+
 # v0.5.1
 
 - Change string interpolation to single quotes

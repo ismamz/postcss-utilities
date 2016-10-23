@@ -143,12 +143,6 @@ test('border color', t => {
     return run(t, input, output, { });
 });
 
-test('all', t => {
-    var input = fs.readFileSync('test/test.css', 'utf8');
-    var output = fs.readFileSync('test/test.expect.css', 'utf8');
-    return run(t, input, output, { });
-});
-
 test('border style', t => {
     var input = fs.readFileSync('test/border-style.css', 'utf8');
     var output = fs.readFileSync('test/border-style.expect.css', 'utf8');
@@ -188,5 +182,11 @@ test('position', t => {
 test('text-stroke', t => {
     var input = fs.readFileSync('test/text-stroke.css', 'utf8');
     var output = fs.readFileSync('test/text-stroke.expect.css', 'utf8');
+    return run(t, input, output, { });
+});
+
+test('all', t => {
+    var input = fs.readFileSync('test/test.css', 'utf8');
+    var output = fs.readFileSync('test/test.expect.css', 'utf8');
     return run(t, input, output, { });
 });

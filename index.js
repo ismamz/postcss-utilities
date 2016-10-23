@@ -27,7 +27,6 @@ var resetList          = require('./lib/reset-list');
 var resetText          = require('./lib/reset-text');
 var size               = require('./lib/size');
 var stickyFooter       = require('./lib/sticky-footer');
-var stickyFooterFluid  = require('./lib/sticky-footer-fluid');
 var textHide           = require('./lib/text-hide');
 var textStroke           = require('./lib/text-stroke');
 var triangle           = require('./lib/triangle');
@@ -234,15 +233,8 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                 }
                 break;
             case 'sticky-footer':
-                if (args.length === 1 || args.length === 2) {
-                    stickyFooterFluid(util, args);
-                } else if (args.length === 3 || args.length === 4) {
-                    if (args[1] === 'fixed') {
-                        // switch args to keep sticky-footer.js
-                        args[1] = args[2];
-                        args[2] = args[3];
-                        stickyFooter(util, args);
-                    }
+                if (args.length === 2 || args.length === 3) {
+                    stickyFooter(util, args);
                 } else {
                     result.warn('Invalid number of parameters for Sticky ' +
                                 'Footer utility:  read the docs.');
