@@ -1,5 +1,9 @@
 # Change Log
 
+# v0.6.1
+
+- Fix [Position utility bug](https://github.com/ismamz/postcss-utilities/issues/8)
+
 # v0.6.0
 
 - Simplify Sticky Footer utility
