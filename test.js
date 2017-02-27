@@ -74,7 +74,15 @@ test('text hide', t => {
     return run(t, 'a{ background: #000; color: #fff; @util text-hide; }',
                   'a{ background: #000; color: #fff; font: 0/0 a;' +
                   ' color: transparent; text-shadow: none;' +
-                  ' background-color: transparent; border: 0; }', { });
+                  ' background-color: transparent; border: 0; }', {
+                      textHideMethod: 'font'
+                  });
+});
+
+test('text hide default', t => {
+    var input = fs.readFileSync('test/text-hide.css', 'utf8');
+    var output = fs.readFileSync('test/text-hide.expect.css', 'utf8');
+    return run(t, input, output, { });
 });
 
 test('triangle', t => {
@@ -101,10 +109,19 @@ test('with nested rules', t => {
     return run(t, input, output, { });
 });
 
+test('with nested rules and options', t => {
+    var input = fs.readFileSync('test/nested-options.css', 'utf8');
+    var output = fs.readFileSync('test/nested-options.expect.css', 'utf8');
+    return run(t, input, output, {
+        noHoverSelector: '.noHover',
+        noJsSelector: '.noJS'
+    });
+});
+
 test('clearfix ie8', t => {
     var input = fs.readFileSync('test/clearfix-ie8.css', 'utf8');
     var output = fs.readFileSync('test/clearfix-ie8.expect.css', 'utf8');
-    return run(t, input, output, { });
+    return run(t, input, output, { ie8: true });
 });
 
 test('var support', t => {

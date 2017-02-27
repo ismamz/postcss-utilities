@@ -1,0 +1,33 @@
+/* Media Hover
+   ========================================================================== */
+.hover {
+    background-color: #f3f3f3;
+    color: #000;
+}
+
+.noHover .hover,
+.noHover .foo {
+    background-color: #fff;
+    color: blue;
+}
+
+.noHover .bar {
+    top: 0;
+}
+
+/* No JS
+   ========================================================================== */
+.js {
+    background-color: #f3f3f3;
+    color: #000;
+}
+
+.noJS .js,
+.noJS .foo {
+    background-color: #fff;
+    color: blue;
+}
+
+.noJS .bar {
+    top: 0;
+}

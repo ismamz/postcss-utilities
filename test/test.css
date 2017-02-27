@@ -44,18 +44,6 @@ a {
     @util clearfix;
 }
 
-/* Text Hide
-   ========================================================================== */
-.text-hide {
-    background: #000;
-    @util text-hide;
-    color: #fff;
-}
-
-.text-hide-2 {
-    @util text-hide(2);
-}
-
 /* Horizontal Rule
    ========================================================================== */
 hr {

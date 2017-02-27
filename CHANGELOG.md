@@ -1,5 +1,14 @@
 # Change Log
 
+# v0.7.0
+
+- Fix `Container#remove` warning for clearfix utility
+- Unify format of alert and error messages
+- Add options to set the selectors for `no-hover` and `no-js` utilities
+- Add options to use alternative techniques for `text-hide` and `center` utilities [#10](https://github.com/ismamz/postcss-utilities/issues/10)
+- Add option `ie8` to use compatible method for `clearfix`
+- Add "Quick usage" on README.md
+
 # v0.6.1
 
 - Fix [Position utility bug](https://github.com/ismamz/postcss-utilities/issues/8)

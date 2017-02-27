@@ -2,7 +2,7 @@
 
 <p align="center">
     <a href="https://ismamz.github.io/postcss-utilities">
-        <img src="https://github.com/ismamz/postcss-utilities/blob/master/media/logo.png" alt="PostCSS Utility Library">
+        <img src="https://github.com/ismamz/postcss-utilities/blob/master/media/logo.png" alt="PostCSS Utility Library" width="200">
     </a>
 </p>
 
@@ -10,9 +10,7 @@
 [ci-img]:  https://travis-ci.org/ismamz/postcss-utilities.svg
 [ci]:      https://travis-ci.org/ismamz/postcss-utilities
 
-Let's face it. You don't have time to write your own mixins, helpers or shortcuts for your next project. Let [postcss-utilities](http://github.io/ismamz/postcss-utilities) help you instead.
-
-postcss-utilities is a [PostCSS] plugin that includes the most commonly used mixins, shortcuts and helpers. It's as easy as specifying `@util utility-name` in your stylesheet, and postcss-utilities will handle the rest for you.
+[postcss-utilities](https://ismamz.github.io/postcss-utilities/) is a [PostCSS] plugin that includes the most commonly used mixins, shortcuts and helpers. It's as easy as specifying `@util utility-name` in your stylesheet, and postcss-utilities will handle the rest for you.
 
 <h4 align="center"><a href="https://ismamz.github.io/postcss-utilities">Check out the documentation to get started using postcss-utilities</a></h4>
 
@@ -20,14 +18,18 @@ postcss-utilities is a [PostCSS] plugin that includes the most commonly used mix
 
 ### Motivation
 
-PostCSS has a lot of plugins and some of them use non-standar CSS properties to work as mixins or helpers. This is not a best way for a PostCSS plugin, because developers will not understand what is the source of this property.
+PostCSS has a lot of plugins and some of them use non-standard CSS properties to work as mixins or helpers. This is not a best way for a PostCSS plugin, because developers will not understand what is the source of this property.
 
 > "This plugin saves us from many tiny plugins with unknown properties" _‒[@ai](https://github.com/ai) proposal [postcss/issues/645](https://github.com/postcss/postcss/issues/645)_
 
 ### What is the difference between preprocessor’s mixins libraries?
 
+There are lot of Sass Mixins Libraries ([over 65!](http://www.cssauthor.com/sass-mixins-library/)), but postcss-utilities makes the difference. All mixins and helpers are built with JavaScript and you can add to your workflow with ease, as simple as adding [autoprefixer](https://github.com/postcss/autoprefixer) or many others useful [PostCSS plugins](https://github.com/postcss/postcss/blob/master/docs/plugins.md).
+
+You can forget about copy mixins from project to project and focus on write your project specific mixins and use this plugin for the most generic helpers.
+
 - You don’t need the extra files in your css codebase for mixins.
-- You don’t need mixins for vendor prefixing (use [autoprefixer plugin](https://github.com/postcss/autoprefixer))
+- You don’t need mixins for vendor prefixing (use [autoprefixer](https://github.com/postcss/autoprefixer) plugin)
 - You can use postcss-utilities with LESS, SASS, vanilla CSS or whatever you choice.
 
 ### List of current utilities
@@ -71,10 +73,14 @@ PostCSS has a lot of plugins and some of them use non-standar CSS properties to 
     @util clearfix;
 }
 
-.box-16-9 {
-    background-color: #ccc;
-    margin-bottom: 20px;
-    @util aspect-ratio(16:9);
+.rounded-top {
+    @util border-top-radius(4px);
+}
+
+@util no-hover {
+    .box {
+        background-color: #666;
+    }
 }
 
 ```
@@ -88,15 +94,13 @@ PostCSS has a lot of plugins and some of them use non-standar CSS properties to 
     clear: both;
 }
 
-.box-16-9 {
-    background-color: #ccc;
-    margin-bottom: 20px;
-    position: relative;
-    display: block;
-    height: 0;
-    padding: 0;
-    overflow: hidden;
-    padding-bottom: 56.25%;
+.rounded-top {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.no-hover .box {
+    background-color: #666;
 }
 
 ```
@@ -107,11 +111,74 @@ PostCSS has a lot of plugins and some of them use non-standar CSS properties to 
      title="Philosopher’s stone, logo of PostCSS"
      src="http://postcss.github.io/postcss/logo-leftp.svg">
 
+### Quick usage
+
+Using [PostCSS CLI](https://github.com/postcss/postcss-cli) you can do the following:
+
+First, install `postcss-cli` and the plugin on your project folder:
+
+```
+$ npm install postcss-cli postcss-utilities --save-dev
+```
+
+And finally add this script to your `package.json`:
+
+```json
+"scripts": {
+    "postcss": "postcss input.css -u postcss-utilities -o output.css -w"
+}
+```
+
+After this you can run `npm run postcss` and transform your `input.css` into `output.css`. Note that `-w` is for observe file system changes and recompile as source files change.
+
+### For tasks runners and others enviroments
+
 ```js
-postcss([ require('postcss-utilities') ])
+postcss([ require('postcss-utilities')({ /* options*/ }) ])
 ```
 
 See [PostCSS] docs for examples of your environment.
+
+
+## Options
+
+##### noHoverSelector
+
+Type: `string`<br>
+Default: `.no-hover`
+
+To use with [`no-hover` utility](https://ismamz.github.io/postcss-utilities/docs#no-hover)
+
+##### noJsSelector
+
+Type: `string`<br>
+Default: `.no-js`
+
+To use with [`no-js` utility](https://ismamz.github.io/postcss-utilities/docs#no-js)
+
+##### ie8
+
+Type: `boolean`<br>
+Default: `false`
+
+Set `true` to use `clearfix` method IE8 compatible
+
+##### centerMethod
+
+Type: `string`<br>
+Default: `transform`
+Values: `['transform'|'flexbox']`
+
+To use with [`center` utility](https://ismamz.github.io/postcss-utilities/docs#center)
+
+##### textHideMethod
+
+Type: `string`<br>
+Default: `indent`
+Values: `['indent'|'font']`
+
+To use with [`text-hide` utility](https://ismamz.github.io/postcss-utilities/docs#text-hide)
+
 
 ## Contributing
 

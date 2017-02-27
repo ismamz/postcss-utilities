@@ -5,7 +5,7 @@
 .bar {
     margin: 0;
     top: 3px;
-    @util clearfix-ie8;
+    @util clearfix;
 }
 
 .woo {
@@ -13,5 +13,5 @@
 }
 
 .cfx {
-    @util clearfix-ie8;
+    @util clearfix;
 }

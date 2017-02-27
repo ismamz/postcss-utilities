@@ -81,6 +81,9 @@ function stringifyNode(node) {
 // main plugin
 module.exports = postcss.plugin('postcss-utilities', function (opts) {
     opts = opts || {};
+    var noHoverSelector = opts.noHoverSelector || '.no-hover';
+    var noJsSelector = opts.noJsSelector || '.no-js';
+    var ie8 = opts.ie8 || false;
 
     return function (css, result) {
         css.walkAtRules('util', function (util) {
@@ -111,8 +114,7 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
             case 'aspect-ratio':
                 if (args.length > 1 && args.length !== 3) {
                     result.warn('Aspect Ratio utility requires 1 parameter:' +
-                                ' [ratio]' +
-                                ' Two integers separates by ":". Ex: 16:9');
+                                ' [<int>:<int>]');
                 }
                 aspectRatio(util, args);
                 break;
@@ -121,7 +123,7 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                     borderColor(util, args);
                 } else {
                     result.warn('Border Color utility requires at least 1 ' +
-                            'parameter. [colors separated by spaces]');
+                            'parameter: [colors separated by spaces]');
                 }
                 break;
             case 'border-top-radius':
@@ -141,7 +143,7 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                     borderStyle(util, args);
                 } else {
                     result.warn('Border Style utility requires at least 1 ' +
-                            'parameter. [border styles separated by spaces]');
+                            'parameter: [border styles separated by spaces]');
                 }
                 break;
             case 'border-width':
@@ -149,11 +151,11 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                     borderWidth(util, args);
                 } else {
                     result.warn('Border Width utility requires at least 1 ' +
-                            'parameter. [size values separated by spaces]');
+                            'parameter: [size values separated by spaces]');
                 }
                 break;
             case 'center':
-                center(util, args);
+                center(util, args, opts);
                 break;
             case 'center-block':
                 centerBlock(util, args);
@@ -161,20 +163,21 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
             case 'circle':
                 if (args.length !== 3) {
                     result.warn('Circle utility requires 2 parameters:' +
-                                ' [radius], [color].');
+                                ' [radius], [color]');
                 }
                 circle(util, args);
                 break;
             case 'clearfix':
-                clearfix(util);
-                break;
-            case 'clearfix-ie8':
-                clearfixIE8(util);
+                if (ie8) {
+                    clearfixIE8(util);
+                } else {
+                    clearfix(util);
+                }
                 break;
             case 'hd':
                 if (args.length > 1 && args.length !== 2) {
                     result.warn('HD Breakpoint utility requires 1 ' +
-                                'parameters: [min-resolution].');
+                                'parameter: [min-resolution]');
                 }
                 hdBreakpoint(util, args, postcss);
                 break;
@@ -184,7 +187,7 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
             case 'hr':
                 if (args.length > 1 && args.length !== 3) {
                     result.warn('Horizontal Rule utility requires 2 ' +
-                                'parameters: [color], [vertical-margin].');
+                                'parameters: [color], [vertical-margin]');
                 }
                 horizontalRule(util, args);
                 break;
@@ -193,21 +196,21 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                     margin(util, args);
                 } else {
                     result.warn('Margin utility requires at least 1 ' +
-                            'parameter. [size values separated by spaces]');
+                            'parameter: [size values separated by spaces]');
                 }
                 break;
             case 'no-hover':
-                noHover(util, postcss);
+                noHover(util, postcss, noHoverSelector);
                 break;
             case 'no-js':
-                noJs(util, postcss);
+                noJs(util, postcss, noJsSelector);
                 break;
             case 'padding':
                 if (args.length > 1) {
                     padding(util, args);
                 } else {
                     result.warn('Padding utility requires at least 1 ' +
-                            'parameter. [size values separated by spaces]');
+                            'parameter: [size values separated by spaces]');
                 }
                 break;
             case 'position':
@@ -215,7 +218,7 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                     position(util, args);
                 } else {
                     result.warn('Position utility requires at least 1 ' +
-                            'parameter. [lengths values separated by spaces]');
+                            'parameter: [lengths values separated by spaces]');
                 }
                 break;
             case 'reset-list':
@@ -237,11 +240,11 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                     stickyFooter(util, args);
                 } else {
                     result.warn('Invalid number of parameters for Sticky ' +
-                                'Footer utility:  read the docs.');
+                                'Footer utility');
                 }
                 break;
             case 'text-hide':
-                textHide(util, args);
+                textHide(util, args, opts);
                 break;
             case 'text-stroke':
                 textStroke(util, args);
@@ -249,7 +252,7 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
             case 'triangle':
                 if (args.length > 1 && args.length !== 4) {
                     result.warn('Triangle utility requires 2 parameters:' +
-                                ' [size], [color], [orientation].');
+                                ' [size], [color], [orientation]');
                 }
                 triangle(util, args);
                 break;
@@ -257,7 +260,7 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                 if (args.length > 1) {
                     if (args.length !== 3) {
                         result.warn('Truncate Multiline utility requires ' +
-                                    '2 parameters: [lines], [line-height].');
+                                    '2 parameters: [lines], [line-height]');
                     }
                     truncateMultiline(util, args);
                 } else {
@@ -267,7 +270,7 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
             case 'word-wrap':
                 if (args.length > 1 && args.length !== 2) {
                     result.warn('Word Wrap utility requires 1 ' +
-                                'parameters: [wrap].');
+                                'parameters: [wrap]');
                 }
                 wordWrap(util, args);
                 break;

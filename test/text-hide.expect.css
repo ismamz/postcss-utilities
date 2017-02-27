@@ -1,0 +1,9 @@
+/* Text Hide
+   ========================================================================== */
+.text-hide {
+    background: #000;
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    color: #fff;
+}
