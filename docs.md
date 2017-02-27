@@ -30,6 +30,11 @@ title: Documentation
   </div>
 </div>
 
+#### References
+
+- [Maintain Aspect Ratio Mixin (CSS-Tricks)](https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/)
+- [How To - Aspect Ratio (W3Schools)](http://www.w3schools.com/howto/howto_css_aspect_ratio.asp)
+
 
 ## Border Color
 
@@ -156,6 +161,8 @@ Provides a quick method for targeting `border-width` on specific sides of a box.
 
 Block-level element of an unknown height and width, centered vertically within his parent.
 
+### Transform Method (default)
+
 <div class="parent">
   .parent
   <div class="child">
@@ -173,6 +180,25 @@ Block-level element of an unknown height and width, centered vertically within h
 </div>
 
 **Note:** You should add `position: relative` to the parent element.
+
+### Flexbox Method
+
+Add to options: `{ centerMethod: 'flexbox' }` to use this method.
+
+<div class="parent-fb">
+  <div class="child-fb">
+    child
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-6 col-sm-12">
+    {% highlight css %}{% include css/center-flexbox.css %}{% endhighlight %}
+  </div>
+  <div class="col-6 col-sm-12">
+    {% highlight css %}{% include css/center-flexbox.expect.css %}{% endhighlight %}
+  </div>
+</div>
 
 
 ## Center Block
@@ -228,11 +254,6 @@ Create a simple circle figure.
 
 The clearfix hack is a popular way to contain floats without resorting to using presentational markup.
 
-Read more:
-
-- [The very latest clearfix reloaded (Thierry Koblentz)](http://cssmojo.com/the-very-latest-clearfix-reloaded/)
-- [A new micro clearfix hack (Nicolas Gallagher)](http://nicolasgallagher.com/micro-clearfix-hack/)
-
 <div class="row">
   <div class="col-6 col-sm-12">
     {% highlight css %}{% include css/clearfix.css %}{% endhighlight %}
@@ -242,20 +263,23 @@ Read more:
   </div>
 </div>
 
-### Clear Fix for old browsers
+### Clear Fix for IE8
 
-<div class="util">
-  {% highlight css %}@util clearfix-ie8;{% endhighlight %}
-</div>
+Add to options: `{ ie8: true }` to use this method.
 
 <div class="row">
   <div class="col-6 col-sm-12">
-    {% highlight css %}{% include css/clearfix-ie8.css %}{% endhighlight %}
+    {% highlight css %}{% include css/clearfix.css %}{% endhighlight %}
   </div>
   <div class="col-6 col-sm-12">
     {% highlight css %}{% include css/clearfix-ie8.expect.css %}{% endhighlight %}
   </div>
 </div>
+
+#### References
+
+- [The very latest clearfix reloaded (Thierry Koblentz)](http://cssmojo.com/the-very-latest-clearfix-reloaded/)
+- [A new micro clearfix hack (Nicolas Gallagher)](http://nicolasgallagher.com/micro-clearfix-hack/)
 
 
 ## HD Breakpoint
@@ -267,11 +291,6 @@ Read more:
 </div>
 
 Style adjustments for high resolution devices.
-
-Read more:
-
-- [HTML5 Boilerplate - The high resolution media query](https://github.com/h5bp/html5-boilerplate/commit/0d9f00826ac4a0154b6f2ed7ad0c127a124e3c34)
-- [MDN - `<resolution>`](https://developer.mozilla.org/en-US/docs/Web/CSS/resolution)
 
 #### Parameters
 
@@ -290,12 +309,16 @@ Read more:
   </div>
 </div>
 
+#### References
+
+- [HTML5 Boilerplate - The high resolution media query](https://github.com/h5bp/html5-boilerplate/commit/0d9f00826ac4a0154b6f2ed7ad0c127a124e3c34)
+- [MDN - `<resolution>`](https://developer.mozilla.org/en-US/docs/Web/CSS/resolution)
 
 ## Hide Visually
 
 <div class="util">{% highlight css %}@util hide-visually;{% endhighlight %}</div>
 
-Only display content to screen readers. Read more: [How to hide content (a11yproject.com)](http://a11yproject.com/posts/how-to-hide-content).
+Only display content to screen readers.
 
 <div class="row">
   <div class="col-6 col-sm-12">
@@ -305,6 +328,10 @@ Only display content to screen readers. Read more: [How to hide content (a11ypro
     {% highlight css %}{% include css/hide-visually.expect.css %}{% endhighlight %}
   </div>
 </div>
+
+#### References
+
+- [How to hide content (a11yproject.com)](http://a11yproject.com/posts/how-to-hide-content)
 
 
 ## Horizontal rule
@@ -362,9 +389,11 @@ Only display content to screen readers. Read more: [How to hide content (a11ypro
 
 **Note:** You should add `.no-hover` class to the `html` tag when the browser or device doesn't support `hover`.
 
-Similar to:
+Change `noHoverSelector` option to use your own selector:
 
-- [A shim for the Media Queries Level 4 `hover` media feature](https://github.com/twbs/mq4-hover-shim)
+```js
+{ noHoverSelector: '.my-selector' }
+```
 
 <div class="row">
   <div class="col-6 col-sm-12">
@@ -374,6 +403,10 @@ Similar to:
     {% highlight css %}{% include css/hover.expect.css %}{% endhighlight %}
   </div>
 </div>
+
+#### References
+
+- [A shim for the Media Queries Level 4 `hover` media feature](https://github.com/twbs/mq4-hover-shim)
 
 
 ## No JS
@@ -385,6 +418,12 @@ Similar to:
 </div>
 
 **Note:** You should add `.no-js` class to the `html` tag when the browser or device doesn't support JavaScript.
+
+Change `noJsSelector` option to use your own selector:
+
+```js
+{ noJsSelector: '.my-selector' }
+```
 
 <div class="row">
   <div class="col-6 col-sm-12">
@@ -512,13 +551,11 @@ Sets the `width` and `height` of the element in one statement.
 
 ## Sticky Footer
 
-### Fluid
-
 <div class="util">
 {% highlight css %}@util sticky-footer([footer height], [wrapper selector]);{% endhighlight %}
 </div>
 
-Ensure that your fixed-height footer stays down at the bottom of the viewport, where God intended it to be, even if your content is too short to keep it down naturally.
+Ensures that the fixed height footer is kept down at the bottom of the viewport, even if the content is short.
 
 | Parameter | Type | Default | Optional |
 |-----------|------|---------|----------|
@@ -536,7 +573,7 @@ Ensure that your fixed-height footer stays down at the bottom of the viewport, w
 
 **Note:** You should set `position: relative;` and `min-height: 100%;` fot `html` tag.
 
-**References:**
+#### References
 
 - [Modern Clean CSS “Sticky Footer”](http://mystrd.at/modern-clean-css-sticky-footer/)
 - [Sticky Footer, Fixed Height](https://davidtheclark.github.io/scut/sticky-footer-fixed.html)
@@ -547,7 +584,9 @@ Ensure that your fixed-height footer stays down at the bottom of the viewport, w
 
 <div class="util">{% highlight css %}@util text-hide;{% endhighlight %}</div>
 
-CSS image replacement. Read more: [CSS image replacement technique (HTML5 Boilerplate)](https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757).
+CSS image replacement.
+
+### Indent technique (default)
 
 <div class="row">
   <div class="col-6 col-sm-12">
@@ -558,25 +597,31 @@ CSS image replacement. Read more: [CSS image replacement technique (HTML5 Boiler
   </div>
 </div>
 
-### Alternative technique
+**Note:** It should be a block element.
 
-<div class="util">{% highlight css %}@util text-hide(2);{% endhighlight %}</div>
+### Font technique
+
+Add to options: `{ textHideMethod: 'font' }` to use this method.
 
 <div class="row">
   <div class="col-6 col-sm-12">
-    {% highlight css %}{% include css/text-hide-2.css %}{% endhighlight %}
+    {% highlight css %}{% include css/text-hide.css %}{% endhighlight %}
   </div>
   <div class="col-6 col-sm-12">
     {% highlight css %}{% include css/text-hide-2.expect.css %}{% endhighlight %}
   </div>
 </div>
 
+#### References
+
+- [CSS image replacement technique (HTML5 Boilerplate)](https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757)
+
 
 ## Text stroke
 
 <div class="util">{% highlight css %}@util text-stroke([size], [color], [smooth]);{% endhighlight %}</div>
 
-Add text stroke with text shadow effect: [CodePen](http://codepen.io/ismamz/pen/YGkgkZ)
+Add text stroke with text shadow effect: [Example on CodePen](http://codepen.io/ismamz/pen/YGkgkZ)
 
 | Parameter | Type | Default | Optional |
 |-----------|------|---------|----------|
@@ -593,7 +638,9 @@ Add text stroke with text shadow effect: [CodePen](http://codepen.io/ismamz/pen/
   </div>
 </div>
 
-**Source:** [postcss-text-stroke](https://github.com/immortal-som/postcss-text-stroke)
+#### References
+
+- [postcss-text-stroke](https://github.com/immortal-som/postcss-text-stroke)
 
 
 ## Triangle
@@ -662,8 +709,6 @@ This mixin will truncate text, adding an ellipsis to represent overflow.
   {% highlight css %}@util truncate([lines], [line-height]);{% endhighlight %}
 </div>
 
-Read more: [Line Clampin’ (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/).
-
 #### Parameters
 
 | Parameter | Type | Default | Optional |
@@ -681,6 +726,10 @@ Read more: [Line Clampin’ (Truncating Multiple Line Text)](https://css-tricks.
 </div>
 
 **Note:** Multiline ellipsis is [not supported by Firefox, Edge & IE](http://caniuse.com/#feat=css-line-clamp).
+
+#### References
+
+- [Line Clampin’ (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
 
 
 ## Word Wrap

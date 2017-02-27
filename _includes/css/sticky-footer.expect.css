@@ -1,11 +1,11 @@
 body {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100px;
-    width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
 }

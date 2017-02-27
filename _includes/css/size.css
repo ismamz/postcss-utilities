@@ -1,11 +1,11 @@
 a {
-    @util size(2em);
+  @util size(2em);
 }
 
 b {
-    @util size(auto, 10em);
+  @util size(auto, 10em);
 }
 
 c {
-    @util size(200px, 100px);
+  @util size(200px, 100px);
 }

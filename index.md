@@ -52,14 +52,43 @@ You can use a PostCSS runner or use directly PostCSS API. Choose your favorite r
 
 #### 3. Read the docs and start to use `@util`
 
-##### `text-hide` example:
+##### Examples:
 
 <div class="row">
   <div class="col-6 col-sm-12">
-    {% highlight css %}{% include css/text-hide.css %}{% endhighlight %}
+{% highlight css %}
+.cfx {
+    @util clearfix;
+}
+
+.rounded-top {
+    @util border-top-radius(4px);
+}
+
+@util no-hover {
+    .box {
+        background-color: #666;
+    }
+}
+{% endhighlight %}
   </div>
   <div class="col-6 col-sm-12">
-    {% highlight css %}{% include css/text-hide.expect.css %}{% endhighlight %}
+{% highlight css %}
+.cfx:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.rounded-top {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.no-hover .box {
+    background-color: #666;
+}
+{% endhighlight %}
   </div>
 </div>
 

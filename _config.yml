@@ -3,9 +3,9 @@ name: PostCSS Utility Library
 description: postcss-utilities is a PostCSS plugin that have the most used mixins, shortcuts and helpers to use as native @util rules in yours stylesheets.
 baseurl: "/postcss-utilities"
 url: "https://ismamz.github.io/postcss-utilities"
-version: 0.2.0
-author: PostCSS
-author_url: http://postcss.org/
+version: 0.7.0
+author: Ismael Martínez
+author_url: http://isma.uy/
 
 # Build settings
 markdown: kramdown

@@ -693,6 +693,23 @@ header {
   padding: 20px;
 }
 
+.parent-fb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  background-color: #ddd;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.child-fb {
+  background-color: $main-color;
+  padding: 20px;
+  color: #fff;
+}
+
 .wrap-box {
   max-width: 300px;
   margin: 0 auto;

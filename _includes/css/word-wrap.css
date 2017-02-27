@@ -1,7 +1,7 @@
 .foo {
-    @util word-wrap;
+  @util word-wrap;
 }
 
 .bar {
-    @util word-wrap(normal);
+  @util word-wrap(normal);
 }

@@ -1,5 +1,7 @@
 .text-hide {
-  overflow: hidden;
-  text-indent: 101%;
-  white-space: nowrap;
+  font: "0/0" a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
 }
