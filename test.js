@@ -5,7 +5,7 @@ import fs      from 'fs';
 import plugin from './';
 
 function run(t, input, output, opts = { }) {
-    return postcss([ plugin(opts) ]).process(input)
+    return postcss([ plugin(opts) ]).process(input, { from: undefined })
         .then( result => {
             fs.writeFileSync('test/out.css', result.css);
             t.deepEqual(result.css, output);
@@ -14,7 +14,7 @@ function run(t, input, output, opts = { }) {
 }
 
 function runWithWarn(t, input, output, numberOfWarn, opts = { }) {
-    return postcss([ plugin(opts) ]).process(input)
+    return postcss([ plugin(opts) ]).process(input, { from: undefined })
         .then( result => {
             t.deepEqual(result.css, output);
             t.deepEqual(result.warnings().length, numberOfWarn);
@@ -54,7 +54,7 @@ test('truncate', t => {
 test('reset list', t => {
     return run(t, 'ul{ @util reset-list; }',
                   'ul{ margin-top: 0; margin-bottom: 0; padding-left: 0; }' +
-                  '\nul li{ list-style: none; }', { });
+                  'ul li{ list-style: none; }', { });
 });
 
 test('hide visually', t => {
@@ -66,8 +66,8 @@ test('hide visually', t => {
 
 test('clearfix', t => {
     return run(t, 'a{ @util clearfix; }',
-                  'a:after {\n    content: \'\';\n    ' +
-                  'display: block;\n    clear: both\n}', { });
+                  'a:after{\n    content: \'\';\n    ' +
+                  'display: block;\n    clear: both; }', { });
 });
 
 test('text hide', t => {

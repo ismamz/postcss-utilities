@@ -2,7 +2,11 @@
 
 <p align="center">
     <a href="https://ismamz.github.io/postcss-utilities">
-        <img src="https://github.com/ismamz/postcss-utilities/blob/master/media/logo.png" alt="PostCSS Utility Library" width="200">
+        <img
+            src="https://raw.githubusercontent.com/ismamz/postcss-utilities/master/media/logo.png"
+            alt="PostCSS Utility Library"
+            width="200"
+        />
     </a>
 </p>
 
@@ -28,7 +32,7 @@ There are lot of Sass Mixins Libraries ([over 65!](http://www.cssauthor.com/sass
 
 You can forget about copy mixins from project to project and focus on write your project specific mixins and use this plugin for the most generic helpers.
 
-- You don’t need the extra files in your css codebase for mixins.
+- You don’t need the extra files in your CSS codebase for mixins.
 - You don’t need mixins for vendor prefixing (use [autoprefixer](https://github.com/postcss/autoprefixer) plugin)
 - You can use postcss-utilities with LESS, SASS, vanilla CSS or whatever you choice.
 
@@ -115,21 +119,67 @@ You can forget about copy mixins from project to project and focus on write your
 
 Using [PostCSS CLI](https://github.com/postcss/postcss-cli) you can do the following:
 
-First, install `postcss-cli` and the plugin on your project folder:
+Install `postcss-cli` and the plugin on your project directory:
 
 ```
-$ npm install postcss-cli postcss-utilities --save-dev
+npm install postcss-cli postcss-utilities --save-dev
 ```
 
-And finally add this script to your `package.json`:
+Add a `postcss` script to your `package.json`:
 
 ```json
 "scripts": {
-    "postcss": "postcss input.css -u postcss-utilities -o output.css -w"
+    "postcss": "postcss input.css -u postcss-utilities -o output.css"
 }
 ```
 
-After this you can run `npm run postcss` and transform your `input.css` into `output.css`. Note that `-w` is for observe file system changes and recompile as source files change.
+After this, you can run `npm run postcss` and transform your `input.css` into `output.css`.
+
+
+### Use with [styled-jsx](https://github.com/zeit/styled-jsx)
+
+**styled-jsx** allows you to use full, scoped and component-friendly CSS in your JSX (rendered on the server or the client) and you can add `@util` rules with `postcss-utilities`.
+
+```
+npm install --save styled-jsx styled-jsx-plugin-postcss postcss-utilities
+```
+
+Add `postcss` config in your `package.json`:
+
+```json
+"postcss": {
+    "plugins": {
+        "postcss-utilities": {}
+    }
+}
+```
+
+Add `styled-jsx/babel` to plugins in your babel configuration:
+
+```json
+{
+  "plugins": [
+    "styled-jsx/babel"
+  ]
+}
+```
+
+Then write `@util` rules in your code:
+
+```jsx
+export default () => (
+  <div>
+    <p>only this paragraph will get the style :)</p>
+
+    <style jsx>{`
+      p {
+        color: red;
+        @util center;
+      }
+    `}</style>
+  </div>
+)
+```
 
 ### For tasks runners and others enviroments
 
@@ -183,9 +233,11 @@ To use with [`text-hide` utility](https://ismamz.github.io/postcss-utilities/doc
 ## Contributing
 
 The list of utilities is open for suggestions.
+
 - Do you think that we should include a new utility? [Create an issue with you proposal](https://github.com/ismamz/postcss-utilities/issues/new).
 - Found an issue? [Report it!](https://github.com/ismamz/postcss-utilities/issues/new).
 - Would you like to contribute with code or documentation? [Send a pull request](https://github.com/ismamz/postcss-utilities/pull/new/master)
+
 
 ## Contributors
 

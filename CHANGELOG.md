@@ -1,5 +1,11 @@
 # Change Log
 
+# v0.8.0
+
+- Fix `centerMethod` option
+- Update dependencies
+- More customization for `hr` utility
+
 # v0.7.0
 
 - Fix `Container#remove` warning for clearfix utility
@@ -7,7 +13,7 @@
 - Add options to set the selectors for `no-hover` and `no-js` utilities
 - Add options to use alternative techniques for `text-hide` and `center` utilities [#10](https://github.com/ismamz/postcss-utilities/issues/10)
 - Add option `ie8` to use compatible method for `clearfix`
-- Add "Quick usage" on README.md
+- Add "Quick usage" and styled-jsx support on README.md
 
 # v0.6.1
 

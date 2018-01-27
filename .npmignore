@@ -2,6 +2,7 @@
 
 node_modules/
 npm-debug.log
+package-lock.json
 
 test.js
 .travis.yml
