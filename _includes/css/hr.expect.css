@@ -1,7 +1,7 @@
 hr {
   height: 1px;
   border: 0;
-  border-top: 1px solid #000;
+  border-top: 3px dotted #000;
   margin: 20px 0;
   display: block;
 }

@@ -337,7 +337,7 @@ Only display content to screen readers.
 ## Horizontal rule
 
 <div class="util">
-{% highlight css %}@util hr([color], [vertical-margin]);{% endhighlight %}
+{% highlight css %}@util hr([color], [vertical-margin], [style], [height]);{% endhighlight %}
 </div>
 
 #### Parameters
@@ -346,6 +346,8 @@ Only display content to screen readers.
 |-----------|------|---------|----------|
 | color  | color | `#ccc` | Yes |
 | vertical-margin  | size | `1em` | Yes |
+| style  | border style | `solid` | Yes |
+| height  | size | `1px` | Yes |
 
 <div class="row">
   <div class="col-6 col-sm-12">

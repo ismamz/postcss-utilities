@@ -1,3 +1,3 @@
 hr {
-  @util hr(#000, 20px);
+  @util hr(#000, 20px, dotted, 3px);
 }
