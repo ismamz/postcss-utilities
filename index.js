@@ -2,6 +2,7 @@ var postcss = require('postcss');
 var parser  = require('postcss-value-parser');
 
 // import functions
+var align              = require('./lib/align');
 var aspectRatio        = require('./lib/aspect-ratio');
 var borderColor        = require('./lib/border-color');
 var borderTopRadius    = require('./lib/border-top-radius');
@@ -10,7 +11,6 @@ var borderBottomRadius = require('./lib/border-bottom-radius');
 var borderLeftRadius   = require('./lib/border-left-radius');
 var borderStyle        = require('./lib/border-style');
 var borderWidth        = require('./lib/border-width');
-var center             = require('./lib/center');
 var centerBlock        = require('./lib/center-block');
 var circle             = require('./lib/circle');
 var clearfix           = require('./lib/clearfix');
@@ -36,6 +36,7 @@ var wordWrap           = require('./lib/word-wrap');
 
 // list of utilities names
 var names = [
+    'align',
     'aspect-ratio',
     'border-color',
     'border-top-radius',
@@ -44,7 +45,6 @@ var names = [
     'border-left-radius',
     'border-style',
     'border-width',
-    'center',
     'center-block',
     'circle',
     'clearfix',
@@ -154,8 +154,8 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                             'parameter: [size values separated by spaces]');
                 }
                 break;
-            case 'center':
-                center(util, args, opts);
+            case 'align':
+                align(util, args);
                 break;
             case 'center-block':
                 centerBlock(util, args);
