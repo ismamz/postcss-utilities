@@ -40,12 +40,12 @@ You can forget about copy mixins from project to project and focus on write your
 
 **IMPORTANT**: The list of utilities is open for suggestions.
 
+- [align](#)
 - [aspect-ratio](https://ismamz.github.io/postcss-utilities/docs#aspect-ratio)
 - [border-color](https://ismamz.github.io/postcss-utilities/docs#border-color)
 - [border-radius](https://ismamz.github.io/postcss-utilities/docs#border-radius)
 - [border-style](https://ismamz.github.io/postcss-utilities/docs#border-style)
 - [border-width](https://ismamz.github.io/postcss-utilities/docs#border-width)
-- [center](https://ismamz.github.io/postcss-utilities/docs#center)
 - [center-block](https://ismamz.github.io/postcss-utilities/docs#center-block)
 - [circle](https://ismamz.github.io/postcss-utilities/docs#circle)
 - [clearfix](https://ismamz.github.io/postcss-utilities/docs#clear-fix)
@@ -212,14 +212,6 @@ Type: `boolean`<br>
 Default: `false`
 
 Set `true` to use `clearfix` method IE8 compatible
-
-##### centerMethod
-
-Type: `string`<br>
-Default: `transform`
-Values: `['transform'|'flexbox']`
-
-To use with [`center` utility](https://ismamz.github.io/postcss-utilities/docs#center)
 
 ##### textHideMethod
 
