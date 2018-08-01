@@ -98,10 +98,22 @@ ul {
     top: 0;
 }
 
-/* Center
+/* Align
    ========================================================================== */
 .center {
     float: left;
-    @util center;
+    @util align(center, center);
+    color: #fff;
+}
+
+.centerX {
+    float: left;
+    @util align(null, center);
+    color: #fff;
+}
+
+.centerY {
+    float: left;
+    @util align(center, null);
     color: #fff;
 }

@@ -152,7 +152,7 @@ ul li {
     top: 0;
 }
 
-/* Center
+/* Align
    ========================================================================== */
 .center {
     float: left;
@@ -160,5 +160,21 @@ ul li {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.centerX {
+    float: left;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+}
+
+.centerY {
+    float: left;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     color: #fff;
 }
