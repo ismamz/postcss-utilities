@@ -55,6 +55,7 @@ a {
     content: '';
     display: block;
     clear: both;
+    visibility: hidden;
 }
 
 .cfx {
@@ -65,6 +66,7 @@ a {
     content: '';
     display: block;
     clear: both;
+    visibility: hidden;
 }
 
 /* Horizontal Rule

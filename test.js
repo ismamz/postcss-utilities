@@ -67,7 +67,8 @@ test('hide visually', t => {
 test('clearfix', t => {
     return run(t, 'a{ @util clearfix; }',
                   'a:after{\n    content: \'\';\n    ' +
-                  'display: block;\n    clear: both; }', { });
+                  'display: block;\n    clear: both;\n    ' +
+                  'visibility: hidden; }', { });
 });
 
 test('text hide', t => {
