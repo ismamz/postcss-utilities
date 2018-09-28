@@ -11,3 +11,11 @@ b {
 c {
     @util size(200px, 100px);
 }
+
+d {
+    @util max-size(100px, 200px);
+}
+
+e {
+    @util min-size(100px, 200px);
+}

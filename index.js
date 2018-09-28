@@ -26,6 +26,8 @@ var position           = require('./lib/position');
 var resetList          = require('./lib/reset-list');
 var resetText          = require('./lib/reset-text');
 var size               = require('./lib/size');
+var sizeMax            = require('./lib/size-max');
+var sizeMin            = require('./lib/size-min');
 var stickyFooter       = require('./lib/sticky-footer');
 var textHide           = require('./lib/text-hide');
 var textStroke         = require('./lib/text-stroke');
@@ -60,6 +62,8 @@ var names = [
     'reset-list',
     'reset-text',
     'size',
+    'max-size',
+    'min-size',
     'sticky-footer',
     'text-hide',
     'text-stroke',
@@ -232,6 +236,22 @@ module.exports = postcss.plugin('postcss-utilities', function (opts) {
                     size(util, args);
                 } else {
                     result.warn('Invalid number of parameters for Size' +
+                                'utility: [width], [height]');
+                }
+                break;
+            case 'max-size':
+                if (args.length === 2 || args.length === 3) {
+                    sizeMax(util, args);
+                } else {
+                    result.warn('Invalid number of parameters for Max Size' +
+                                'utility: [width], [height]');
+                }
+                break;
+            case 'min-size':
+                if (args.length === 2 || args.length === 3) {
+                    sizeMin(util, args);
+                } else {
+                    result.warn('Invalid number of parameters for Min Size' +
                                 'utility: [width], [height]');
                 }
                 break;

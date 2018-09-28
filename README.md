@@ -60,6 +60,8 @@ You can forget about copy mixins from project to project and focus on write your
 - [reset-list](https://ismamz.github.io/postcss-utilities/docs#reset-list)
 - [reset-text](https://ismamz.github.io/postcss-utilities/docs#reset-text)
 - [size](https://ismamz.github.io/postcss-utilities/docs#size)
+- [min-size](https://ismamz.github.io/postcss-utilities/docs#min-size)
+- [max-size](https://ismamz.github.io/postcss-utilities/docs#max-size)
 - [sticky-footer](https://ismamz.github.io/postcss-utilities/docs#sticky-footer)
 - [text-hide](https://ismamz.github.io/postcss-utilities/docs#text-hide)
 - [text-stroke](https://ismamz.github.io/postcss-utilities/docs#text-stroke)

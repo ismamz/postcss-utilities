@@ -14,3 +14,13 @@ c {
     width: 200px;
     height: 100px;
 }
+
+d {
+    max-width: 100px;
+    max-height: 200px;
+}
+
+e {
+    min-width: 100px;
+    min-height: 200px;
+}
