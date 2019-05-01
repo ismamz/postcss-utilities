@@ -48,7 +48,7 @@ You can forget about copy mixins from project to project and focus on write your
 - [center](https://ismamz.github.io/postcss-utilities/docs#center)
 - [center-block](https://ismamz.github.io/postcss-utilities/docs#center-block)
 - [circle](https://ismamz.github.io/postcss-utilities/docs#circle)
-- [clearfix](https://ismamz.github.io/postcss-utilities/docs#clear-fix)
+- [clear-fix](https://ismamz.github.io/postcss-utilities/docs#clear-fix)
 - [hd breakpoint](https://ismamz.github.io/postcss-utilities/docs#hd-breakpoint)
 - [hide-visually](https://ismamz.github.io/postcss-utilities/docs#hide-visually)
 - [hr](https://ismamz.github.io/postcss-utilities/docs#horizontal-rule)
@@ -67,7 +67,7 @@ You can forget about copy mixins from project to project and focus on write your
 - [text-stroke](https://ismamz.github.io/postcss-utilities/docs#text-stroke)
 - [triangle](https://ismamz.github.io/postcss-utilities/docs#triangle)
 - [truncate](https://ismamz.github.io/postcss-utilities/docs#truncate)
-- [word-break](https://ismamz.github.io/postcss-utilities/docs#word-break)
+- [word-wrap](https://ismamz.github.io/postcss-utilities/docs#word-wrap)
 
 
 ## Examples
