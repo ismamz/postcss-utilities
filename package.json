@@ -1,0 +1,19 @@
+{
+  "name": "playground",
+  "private": true,
+  "dependencies": {
+    "dacoda": "^2.0.0",
+    "postcss": "^5.0.10",
+    "postcss-scss": "^0.1.3",
+    "postcss-utilities": "^0.8.1"
+  },
+  "scripts": {
+    "build": "browserify playground/index.source.js | uglifyjs -c > playground/index.js",
+    "watch": "watchify playground/index.source.js -o playground/index.js"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "uglify-js": "^3.5.10",
+    "watchify": "^3.11.1"
+  }
+}
