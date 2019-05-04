@@ -1,5 +1,10 @@
 # Change Log
 
+# v0.8.1
+
+- Fix documentation links
+- Drop compatibility with Node.js version 4
+
 # v0.8.0
 
 - Fix `centerMethod` option
