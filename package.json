@@ -1,6 +1,6 @@
 {
   "name": "postcss-utilities",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "PostCSS plugin to add a collection of mixins, shortcuts, helpers and tools for your CSS",
   "keywords": [
     "postcss",
@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "ava": "^0.25.0",
-    "eslint": "^2.13.1",
+    "eslint": ">=4.18.2",
     "eslint-config-postcss": "^2.0.2",
     "fs": "0.0.2"
   },

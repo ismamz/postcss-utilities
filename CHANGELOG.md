@@ -2,6 +2,10 @@
 
 # v0.8.1
 
+- Upgrade eslint to version 4.18.2 or later
+
+# v0.8.1
+
 - Fix documentation links
 - Drop compatibility with Node.js version 4
 
