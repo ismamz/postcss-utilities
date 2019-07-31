@@ -1,5 +1,10 @@
 # Change Log
 
+# v0.8.4
+
+- Drop Node.js v6 compatibility
+- Fix all dependencies vulnerabilities
+
 # v0.8.3
 
 - Upgrade postcss to version 7.0.17
