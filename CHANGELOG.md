@@ -1,6 +1,11 @@
 # Change Log
 
-# v0.8.1
+# v0.8.3
+
+- Upgrade postcss to version 7.0.17
+- Upgrade postcss-value-parser to version 4.0.0
+
+# v0.8.2
 
 - Upgrade eslint to version 4.18.2 or later
 

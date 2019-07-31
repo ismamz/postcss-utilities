@@ -1,6 +1,6 @@
 {
   "name": "postcss-utilities",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "PostCSS plugin to add a collection of mixins, shortcuts, helpers and tools for your CSS",
   "keywords": [
     "postcss",
@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/ismamz/postcss-utilities",
   "dependencies": {
-    "postcss": "^7.0.2",
-    "postcss-value-parser": "^3.3.0"
+    "postcss": "^7.0.17",
+    "postcss-value-parser": "^4.0.0"
   },
   "devDependencies": {
     "ava": "^0.25.0",
